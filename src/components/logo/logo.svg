@@ -1,0 +1,6 @@
+<svg width="48" height="48">
+  <circle r="22" cx="24" cy="24" fill="none" stroke="rgba(31, 32, 65, 0.25)" stroke-width="3"></circle>
+  <circle r="20" cx="39" cy="39" fill="none" stroke="rgba(31, 32, 65, 0.25)" stroke-width="3" stroke-linecap="round" stroke-dashoffset="14" stroke-dasharray="10 85"></circle>
+  <circle r="14" cx="10" cy="33" fill="none" stroke="rgba(31, 32, 65, 0.25)" stroke-width="3" stroke-linecap="round" stroke-dashoffset="19" stroke-dasharray="17 71"></circle>
+  <circle r="14" cx="13" cy="31" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-dashoffset="19" stroke-dasharray="17 71"></circle>
+</svg>

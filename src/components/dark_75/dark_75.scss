@@ -1,0 +1,10 @@
+@import "src/_variables";
+@import "src/mixin_scss/mixin_colors.scss";
+
+.color {
+  @include colors();
+
+  &__square-dark75 {
+    background-color: $color-dark75;
+  }
+}

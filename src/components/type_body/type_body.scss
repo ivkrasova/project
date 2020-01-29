@@ -1,0 +1,17 @@
+@import "src/_variables";
+@import "src/mixin_scss/mixin_colors.scss";
+
+.type {
+  @include type();
+
+  &__tag-body {
+    font-size: 12px;
+  }
+
+  &__description-body {
+    color: $color_dark75;
+    font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

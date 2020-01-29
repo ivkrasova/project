@@ -1,0 +1,25 @@
+extends ../layout/base.pug
+
+block variables
+  -var title = "Colors & Type"
+  
+block content
+  include ../../components/logo/logo.pug
+  .logo
+    +logo()
+  .group
+    .group_colors
+      include ../../mixin_pug/mixin_colors.pug
+      +color("Dark Shade 100%","#1F2041","dark100")
+      +color("Dark Shade 75%","#1F2041","dark75")
+      +color("Dark Shade 50%","#1F2041","dark50")
+      +color("Dark Shade 25%","#1F2041","dark25")
+      +color("Dark Shade 5%","#1F2041","dark5")
+      +color("Purple","#BC9CFF","purple")
+      +color("Green","#6FCF97","green")
+    .group_type 
+      +type("h1","H1","This one is the sub-section or widget title")
+      +type("h2","H2","Next one is the item title inside widgets")
+      +type("h3","H3","This is a label or CTA text")
+      +type("body","Body","This is the body text which is used for most of the design, like paragraphs, lists, etc.")
+      

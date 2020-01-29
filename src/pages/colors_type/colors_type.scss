@@ -1,0 +1,51 @@
+@import "../../_variables";
+@import "../../mixin_scss/mixin_colors.scss";
+@import "../../components/dark_100/dark_100.scss";
+@import "../../components/dark_75/dark_75.scss";
+@import "../../components/dark_50/dark_50.scss";
+@import "../../components/dark_25/dark_25.scss";
+@import "../../components/dark_5/dark_5.scss";
+@import "../../components/purple/purple.scss";
+@import "../../components/green/green.scss";
+@import "../../components/type_h1/type_h1.scss";
+@import "../../components/type_h2/type_h2.scss";
+@import "../../components/type_h3/type_h3.scss";
+@import "../../components/type_body/type_body.scss";
+
+//сделать в reset.css
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  width: 1102px;
+  height: 610px;
+  margin-top: 63px;
+  margin-left: 150px;
+
+
+
+  &_colors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 270px;
+    height: 610px;
+  }
+
+  &_type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 405px;
+    height: 322px;
+  }
+}

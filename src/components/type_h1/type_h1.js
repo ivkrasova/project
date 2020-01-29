@@ -1,0 +1,1 @@
+import './type_h1.scss'

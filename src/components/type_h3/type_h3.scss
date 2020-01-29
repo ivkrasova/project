@@ -1,0 +1,18 @@
+@import "src/_variables";
+@import "src/mixin_scss/mixin_colors.scss";
+
+.type {
+  @include type();
+
+  &__tag-h3 {
+    font-size: 12px;
+  }
+
+  &__description-h3 {
+    color: $color_dark100;
+    font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+}

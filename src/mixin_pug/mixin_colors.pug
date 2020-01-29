@@ -1,0 +1,13 @@
+//-color&type
+mixin color(name,hex,mod)
+  .color
+    .color__square(class="color__square-" + mod)
+    .color__description
+      span(class="color__description__name")= name
+      span(class="color__description__hex")= hex
+
+mixin type(mod,desc,text)
+  .type
+    .type__tag(class="type__tag-" + mod)= desc
+    .type__description(class="type__description-" + mod)
+      span= text
