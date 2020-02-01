@@ -1,0 +1,19 @@
+mixin checkbox_buttons()
+  .checkbox_buttons
+    p(class="checkbox_buttons__name") checkbox buttons
+    label(class="checkbox_buttons__label")
+      input(class="checkbox_buttons__input" type="checkbox")
+      | #{choice[0]}
+      span(class="checkbox_buttons__box")
+    label(class="checkbox_buttons__label")
+      input(class="checkbox_buttons__input" type="checkbox" checked)
+      | #{choice[1]}
+      span(class="checkbox_buttons__box")
+    label(class="checkbox_buttons__label")
+      input(class="checkbox_buttons__input" type="checkbox" checked)
+      | #{choice[2]}
+      span(class="checkbox_buttons__box")
+
+-var choice = ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"];
+
++checkbox_buttons()

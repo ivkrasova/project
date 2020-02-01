@@ -1,0 +1,47 @@
+@import "src/_variables";
+
+.checkbox_buttons {
+  display: flex;
+  flex-direction: column;
+  width: 222px;
+  height: 100%;
+
+  &__name {
+    @include caption;
+  }
+
+  &__input {
+    appearance: none;
+    position: absolute;
+  }
+
+  &__box {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-dark25;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  &__label {
+    display: flex;
+    @include main-font;
+    color: $color-dark50;
+    line-height: 18px;
+    position: relative;
+    top: 5.5px;
+    padding-left: 30px;
+    padding-bottom: 12px;
+    cursor: pointer;
+  }
+}
+
+.checkbox_buttons__input:checked+.checkbox_buttons__box {
+  border: 1px solid #BC9CFF;
+  background-image: url(/src/components/checkbox_buttons/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}

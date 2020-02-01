@@ -14,24 +14,35 @@ $font-family: 'Conv_Montserrat-Regular',
 sans-serif;
 $font-color: rgba(31, 32, 65, 0.75);
 $font-size: 14px;
-$font-height: 24px;
+$line-height: 24px;
 
 $h1-font-family: 'Conv_Quicksand-Bold',
 'OpenSans-Bold',
 sans-serif;
 $h-font-color: #1F2041;
 $h1-font-size: 24px;
-$h1-font-height: 30px;
+$h1-line-height: 30px;
 
 $h2-font-family: 'Conv_Quicksand-Bold',
 'OpenSans-Bold',
 sans-serif;
 $h2-font-size: 19px;
-$h1-font-height: 24px;
+$h1-line-height: 24px;
 
 $h3-font-family: 'Conv_Montserrat-Bold',
 'OpenSans-Bold',
 sans-serif;
 $h3-font-size: 12px;
-$h3-font-height: 15px;
+$h3-line-height: 15px;
 $h3-text-transform: uppercase;
+
+@mixin caption {
+  font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+@mixin main-font {
+  font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
+  font-size: 14px;
+}

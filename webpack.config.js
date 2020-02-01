@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
-    // publicPath: "dist/"
+    publicPath: "/"
   },
   devServer: {
     overlay: true,
@@ -40,7 +40,10 @@ module.exports = {
             }
           },
           {
-            loader: "sass-loader"
+            loader: 'resolve-url-loader'
+          },
+          {
+            loader: "sass-loader",
           }
         ]
       },
@@ -89,9 +92,9 @@ module.exports = {
       template: "src/index.pug"
       // inject: true
     }),
-    // new HtmlWebpackPlugin({
-    //   filename: "colors_type.html",
-    //   template: "src/pages/colors_type/colors_type.pug"
-    // }),
+    new HtmlWebpackPlugin({
+      filename: "colors_type.html",
+      template: "src/pages/colors_type/colors_type.pug"
+    }),
   ]
 };
