@@ -1,0 +1,13 @@
+mixin radio_buttons()
+  .radio_buttons
+    p(class="radio_buttons__name") radio buttons
+    .radio_buttons__wrapper
+      label(class="radio_buttons__label")
+        input(class="radio_buttons__input" type="radio" name="gender" value="Мужчина" checked)
+        |Мужчина
+        span(class="radio_buttons__box")
+      label(class="radio_buttons__label")
+        input(class="radio_buttons__input" type="radio" name="gender" value="Женщина")
+        |Женщина
+        span(class="radio_buttons__box")
++radio_buttons()

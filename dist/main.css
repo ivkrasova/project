@@ -38,6 +38,209 @@
   font-style: normal
 }
 
+.text_field__label {
+  display: block;
+  width: 320px;
+  height: 67px;
+  font-family: "Conv_Montserrat-Bold", "OpenSans-Bold", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase
+}
+
+.text_field__input {
+  display: block;
+  width: 320px;
+  height: 44px;
+  margin-top: 5px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: rgba(31, 32, 65, 0.25);
+  font-family: "Conv_Montserrat-Regular", "OpenSans", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 15px
+}
+
+.text_field__input:hover,
+.text_field__input:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75)
+}
+
+.text_field__label {
+  display: block;
+  width: 320px;
+  height: 67px;
+  font-family: "Conv_Montserrat-Bold", "OpenSans-Bold", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase
+}
+
+.text_field__input {
+  display: block;
+  width: 320px;
+  height: 44px;
+  margin-top: 5px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: rgba(31, 32, 65, 0.25);
+  font-family: "Conv_Montserrat-Regular", "OpenSans", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 15px
+}
+
+.text_field__input:hover,
+.text_field__input:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75)
+}
+
+.checkbox_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 222px;
+  height: 100%
+}
+
+.checkbox_buttons__name {
+  font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase
+}
+
+.checkbox_buttons__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute
+}
+
+.checkbox_buttons__box {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  background: #FFFFFF;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 4px
+}
+
+.checkbox_buttons__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.5);
+  line-height: 18px;
+  position: relative;
+  top: 5.5px;
+  padding-left: 30px;
+  padding-bottom: 12px;
+  cursor: pointer
+}
+
+.checkbox_buttons__input:checked+.checkbox_buttons__box {
+  border: 1px solid #BC9CFF;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.46439 4.40768L5.70703 8.65032L4.29282 10.0645L0.0501771 5.82189L1.46439 4.40768Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M8.53546 2.99347L9.94967 4.40768L4.29282 10.0645L2.8786 8.65032L8.53546 2.99347Z' fill='url(%23paint1_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='7.82835' y1='2.28636' x2='2.1715' y2='7.94321' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='7.82835' y1='2.28636' x2='2.1715' y2='7.94321' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center
+}
+
+.radio_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 222px;
+  height: 100%
+}
+
+.radio_buttons__name {
+  font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase
+}
+
+.radio_buttons__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute
+}
+
+.radio_buttons__box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  background: #FFFFFF;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 10px
+}
+
+.radio_buttons__label {
+  font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.5);
+  line-height: 24px;
+  margin-right: 20px;
+  padding-left: 30px;
+  position: relative;
+  top: 2px;
+  cursor: pointer
+}
+
+.radio_buttons__label:hover {
+  color: rgba(31, 32, 65, 0.75)
+}
+
+.radio_buttons__input:checked+.radio_buttons__box {
+  border: 1px solid #BC9CFF;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='12' height='12' rx='6' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='6' y1='0' x2='6' y2='12' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center
+}
+
+body {
+  margin: 0;
+  padding: 0
+}
+
+.logo {
+  margin-top: 30px;
+  margin-left: 30px
+}
+
+.group_elements {
+  width: 1159px;
+  margin-left: 140px;
+  margin-top: 63px;
+  background-color: #cbdee9
+}
+
 .color {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -580,4 +783,207 @@ body {
   justify-content: space-between;
   width: 405px;
   height: 322px
+}
+
+.text_field__label {
+  display: block;
+  width: 320px;
+  height: 67px;
+  font-family: "Conv_Montserrat-Bold", "OpenSans-Bold", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase
+}
+
+.text_field__input {
+  display: block;
+  width: 320px;
+  height: 44px;
+  margin-top: 5px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: rgba(31, 32, 65, 0.25);
+  font-family: "Conv_Montserrat-Regular", "OpenSans", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 15px
+}
+
+.text_field__input:hover,
+.text_field__input:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75)
+}
+
+.text_field__label {
+  display: block;
+  width: 320px;
+  height: 67px;
+  font-family: "Conv_Montserrat-Bold", "OpenSans-Bold", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase
+}
+
+.text_field__input {
+  display: block;
+  width: 320px;
+  height: 44px;
+  margin-top: 5px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: rgba(31, 32, 65, 0.25);
+  font-family: "Conv_Montserrat-Regular", "OpenSans", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 15px
+}
+
+.text_field__input:hover,
+.text_field__input:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75)
+}
+
+.checkbox_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 222px;
+  height: 100%
+}
+
+.checkbox_buttons__name {
+  font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase
+}
+
+.checkbox_buttons__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute
+}
+
+.checkbox_buttons__box {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  background: #FFFFFF;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 4px
+}
+
+.checkbox_buttons__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.5);
+  line-height: 18px;
+  position: relative;
+  top: 5.5px;
+  padding-left: 30px;
+  padding-bottom: 12px;
+  cursor: pointer
+}
+
+.checkbox_buttons__input:checked+.checkbox_buttons__box {
+  border: 1px solid #BC9CFF;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='11' viewBox='0 0 10 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.46439 4.40768L5.70703 8.65032L4.29282 10.0645L0.0501771 5.82189L1.46439 4.40768Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M8.53546 2.99347L9.94967 4.40768L4.29282 10.0645L2.8786 8.65032L8.53546 2.99347Z' fill='url(%23paint1_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='7.82835' y1='2.28636' x2='2.1715' y2='7.94321' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='7.82835' y1='2.28636' x2='2.1715' y2='7.94321' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center
+}
+
+.radio_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 222px;
+  height: 100%
+}
+
+.radio_buttons__name {
+  font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase
+}
+
+.radio_buttons__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute
+}
+
+.radio_buttons__box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  background: #FFFFFF;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 10px
+}
+
+.radio_buttons__label {
+  font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.5);
+  line-height: 24px;
+  margin-right: 20px;
+  padding-left: 30px;
+  position: relative;
+  top: 2px;
+  cursor: pointer
+}
+
+.radio_buttons__label:hover {
+  color: rgba(31, 32, 65, 0.75)
+}
+
+.radio_buttons__input:checked+.radio_buttons__box {
+  border: 1px solid #BC9CFF;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='12' height='12' rx='6' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='6' y1='0' x2='6' y2='12' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center
+}
+
+body {
+  margin: 0;
+  padding: 0
+}
+
+.logo {
+  margin-top: 30px;
+  margin-left: 30px
+}
+
+.group_elements {
+  width: 1159px;
+  margin-left: 140px;
+  margin-top: 63px;
+  background-color: #cbdee9
 }

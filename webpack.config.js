@@ -1,13 +1,14 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
-    publicPath: "/"
+    filename: "[name].js"
   },
   devServer: {
     overlay: true,
@@ -56,11 +57,13 @@ module.exports = {
         loader: "pug-loader"
       },
       {
-        test: /\.(png| gif| jpe?g)$/,
+        test: /\.(png|gif|jpe?g)$/i,
         loaders: [{
             loader: 'file-loader',
             options: {
               name: '[path][name].[ext]',
+              outputPath: 'src/img/',
+              // publicPath: 'src/img/',
             },
           },
           'img-loader',
@@ -74,7 +77,7 @@ module.exports = {
           options: {
             name: '[path][name].[ext]',
           },
-        }, ]
+        }]
       },
       //svg
       {
@@ -90,11 +93,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/index.pug"
-      // inject: true
     }),
     new HtmlWebpackPlugin({
       filename: "colors_type.html",
       template: "src/pages/colors_type/colors_type.pug"
+    }),
+    new HtmlWebpackPlugin({
+      filename: "form_elements.html",
+      template: "src/pages/form_elements/form_elements.pug"
     }),
   ]
 };
