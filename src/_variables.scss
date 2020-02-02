@@ -7,6 +7,9 @@ $color-dark25: rgba(31, 32, 65, 0.25);
 $color-dark5: rgba(31, 32, 65, 0.05);
 $color-purple: #BC9CFF;
 $color-green: #6FCF97;
+$primary-color: #BC9CFF;
+$primary-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
 
 //type
 $font-family: 'Conv_Montserrat-Regular',
@@ -36,12 +39,15 @@ $h3-font-size: 12px;
 $h3-line-height: 15px;
 $h3-text-transform: uppercase;
 
+
 @mixin caption {
   font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
 }
+
+//в HTML основные шрифты цвет и тд
 @mixin main-font {
   font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
   font-size: 14px;

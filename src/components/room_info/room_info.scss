@@ -1,0 +1,32 @@
+@import 'src/_variables';
+
+.room_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__icon {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.5rem;
+    line-height: 3rem;
+    background: $primary-gradient;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 0.6rem;
+
+    &__name {
+      font-family: $h3-font-family;
+      color: $color-dark75;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
