@@ -28,7 +28,7 @@
 
   &__label {
     display: flex;
-    @include main-font;
+    // @include main-font;
     color: $color-dark50;
     line-height: 18px;
     position: relative;

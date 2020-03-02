@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -88,19 +89,24 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "main.css"
+      filename: "[name].css"
     }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/index.pug"
     }),
     new HtmlWebpackPlugin({
-      filename: "colors_type.html",
+      filename: "pages/colors_type.html",
       template: "src/pages/colors_type/colors_type.pug"
     }),
     new HtmlWebpackPlugin({
-      filename: "form_elements.html",
+      filename: "pages/form_elements.html",
       template: "src/pages/form_elements/form_elements.pug"
     }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    }, )
   ]
 };

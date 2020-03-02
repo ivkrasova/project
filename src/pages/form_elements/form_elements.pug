@@ -10,13 +10,14 @@ block content
   .group_elements
     include ../../components/text_field/text_field.pug
     //- br
-    +text_field("Text Field", "text","", "This is pretty awesome")
+    +text_field({label: "Text Field", type: "text", name: "text", value: "This is pretty awesome"})
     //- br
     //- br
     //- br
     //- br
     //- br
     //- br
+    include ../../components/drop_guests/drop_guests.pug
     include ../../components/masked_text_field/masked_text_field.pug
     include ../../components/checkbox_buttons/checkbox_buttons.pug
     include ../../components/radio_buttons/radio_buttons.pug

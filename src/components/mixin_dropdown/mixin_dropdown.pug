@@ -1,0 +1,24 @@
+mixin dropdown(options)
+  .dropdown
+    .dropdown_content
+      label(class="text_field__label")=options.title
+      .iqdropdown(class="text_field__input text_field__input-hover")
+        p.iqdropdown-selection(data-seletion-text="item" data-text-plural="items") 
+        .iqdropdown-menu
+          .iqdropdown-menu-option(data-id='item1' data-defaultcount="0" data-mincount="0" data-maxcount="5")
+            div
+              p.iqdropdown-item=options.item1
+              p.iqdropdown-description=options.desc1
+          .iqdropdown-menu-option(data-id='item2' data-defaultcount="0" data-mincount="0" data-maxcount="5")
+            div
+              p.iqdropdown-item=options.item2
+              p.iqdropdown-description=options.desc2
+          .iqdropdown-menu-option(data-id='item3' data-defaultcount="0" data-mincount="0" data-maxcount="5") 
+            div
+              p.iqdropdown-item=options.item3
+              p.iqdropdown-description=options.desc3
+          .iqdropdown-menu-buttons
+            button.iqdropdown-menu-clear=options.clear
+            button.iqdropdown-menu-close
+              | Применить
+            

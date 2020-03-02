@@ -1,5 +1,4 @@
-//-те значения, которые часто повторяются на проекте
-//-colors
+//colors
 $color-dark100: #1F2041;
 $color-dark75: rgba(31, 32, 65, 0.75);
 $color-dark50: rgba(31, 32, 65, 0.5);
@@ -10,45 +9,28 @@ $color-green: #6FCF97;
 $primary-color: #BC9CFF;
 $primary-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
+//default font html
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
+  font-size: 14px;
+  color: $color-dark5;
+}
 
-//type
-$font-family: 'Conv_Montserrat-Regular',
-'OpenSans',
-sans-serif;
-$font-color: rgba(31, 32, 65, 0.75);
-$font-size: 14px;
-$line-height: 24px;
+//заголовки(Quicksand-Bold, black, 24px)
+@mixin title {
+  font-family: 'Conv_Quicksand-Bold', 'OpenSans-Bold', sans-serif;
+  font-size: 24px;
+  color: $color-dark100;
+}
 
-$h1-font-family: 'Conv_Quicksand-Bold',
-'OpenSans-Bold',
-sans-serif;
-$h-font-color: #1F2041;
-$h1-font-size: 24px;
-$h1-line-height: 30px;
-
-$h2-font-family: 'Conv_Quicksand-Bold',
-'OpenSans-Bold',
-sans-serif;
-$h2-font-size: 19px;
-$h1-line-height: 24px;
-
-$h3-font-family: 'Conv_Montserrat-Bold',
-'OpenSans-Bold',
-sans-serif;
-$h3-font-size: 12px;
-$h3-line-height: 15px;
-$h3-text-transform: uppercase;
-
-
+//подпись к полям
 @mixin caption {
   font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-}
-
-//в HTML основные шрифты цвет и тд
-@mixin main-font {
-  font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
-  font-size: 14px;
+  color: $color-dark100;
 }

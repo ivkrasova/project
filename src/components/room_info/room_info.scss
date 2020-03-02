@@ -5,6 +5,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  color: $color-dark75;
 
   &__icon {
     font-family: 'Material Icons';
@@ -24,9 +25,9 @@
     margin-left: 0.6rem;
 
     &__name {
-      font-family: $h3-font-family;
-      color: $color-dark75;
+      font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
       margin-bottom: 0.5rem;
     }
+
   }
 }
