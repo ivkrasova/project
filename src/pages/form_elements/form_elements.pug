@@ -9,16 +9,22 @@ block content
     +logo()
   .group_elements
     include ../../components/text_field/text_field.pug
-    //- br
-    +text_field({label: "Text Field", type: "text", name: "text", value: "This is pretty awesome"})
-    //- br
-    //- br
-    //- br
-    //- br
-    //- br
-    //- br
+    +text_field({label:"text field", state:"default", type: "Email", name:"Email", value:"Email"})
+
+    +text_field({label: "Text Field", state:"Hover / Focus", type: "text", name: "text", value: "This is pretty awesome"})
+    
     include ../../components/drop_guests/drop_guests.pug
-    include ../../components/masked_text_field/masked_text_field.pug
+    //- include ../../components/drop_comfort/drop_comfort.pug
+
+    +text_field({label: "Masked text field", state:"default", type: "text", name: "text", value:"ДД.ММ.ГГГГ", mask: "mask"})
+
+    include ../../components/subscription_field/subscription_field.pug
+    +subscription_field({label: "subscription text field", size: "medium", type:"Email", name: "Email", value: "Email" })
+
+    include ../../components/toggle/toggle.pug
+    +toggle({title: "toggle", checked: "checked", text: "Получать спецпредложения"})
+    +toggle({text: "Получать спецпредложения"})
+
     include ../../components/checkbox_buttons/checkbox_buttons.pug
     include ../../components/radio_buttons/radio_buttons.pug
     include ../../components/room_info/room_info.pug

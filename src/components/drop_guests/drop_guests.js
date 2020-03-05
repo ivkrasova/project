@@ -3,8 +3,8 @@ import './drop_guests.scss';
 require('../../components/mixin_dropdown/mixin_dropdown.js');
 
 
-$(document).ready(() => {
-  $('.iqdropdown').iqDropdown({
+$(function () {
+  $('.iqdropdown_guests').iqDropdown({
     setSelectionText(itemCount, totalItems) {
       const guests = [
         totalItems == 1 ? "гость" :
@@ -12,7 +12,6 @@ $(document).ready(() => {
         "гостей"
       ];
       const infant = [
-        // itemCount.item3 == 0 ? " " : //как убрать 0?
         itemCount.item3 == 1 ? "младенец" :
         itemCount.item3 > 1 && itemCount.item3 < 5 ? 'младенца' :
         "младенецев"
@@ -26,17 +25,15 @@ $(document).ready(() => {
         return `${totalItems} ${guests}, ${itemCount.item3} ${infant}`;
       }
     },
-    beforeIncrement: (id, itemCount) => {
-      if (id === 'item3' || id === 'item2') {
-        return itemCount.item1 >= 1;
-      }
-      return true;
-    },
-    beforeDecrement: (id, itemCount) => {
-      if (id === 'item1') {
-        return itemCount.item1 > itemCount.item3;
-      }
-      return true;
-    }
   });
-});
+
+  // $('.iqdropdown_guests').on('click', function () {
+  //   $('.iqdropdown_guests').css('border-radius', '4px 4px 0 0');
+  // });
+
+  // $('.iqdropdown_guests .iqdropdown-menu-clear').on('click', function () {
+  //   $('.iqdropdown_guests .iqdropdown-selection').html('Сколько гостей');
+  //   $('.iqdropdown_guests .iqdropdown-item-controls .counter').html('0');
+
+  // });
+})

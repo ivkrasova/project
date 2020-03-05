@@ -16,7 +16,7 @@ body {
   padding: 0;
   font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
   font-size: 14px;
-  color: $color-dark5;
+  color: $color-dark75;
 }
 
 //заголовки(Quicksand-Bold, black, 24px)
@@ -33,4 +33,16 @@ body {
   line-height: 15px;
   text-transform: uppercase;
   color: $color-dark100;
+}
+
+//состояния default, hover, focus
+@mixin state {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $color-dark50;
+}
+
+@mixin arrow {
+  //стрелка для переиспользования? надо?
 }

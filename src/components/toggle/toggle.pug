@@ -1,0 +1,9 @@
+mixin toggle(options)
+  .toggle
+    .toggle_title=options.title
+    .toggle_content
+      input.toggle_content__input(type="checkbox" id="switch" checked=options.checked)
+      label.toggle_content__label(for="switch")
+      span.toggle_content__text=options.text
+
+//- +toggle({title, checked: "checked", text})

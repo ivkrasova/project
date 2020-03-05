@@ -42,7 +42,7 @@
       return n.d(t, "a", t), t
    }, n.o = function (e, t) {
       return Object.prototype.hasOwnProperty.call(e, t)
-   }, n.p = "", n(n.s = 3)
+   }, n.p = "", n(n.s = 4)
 }([function (e, t, n) {
    "use strict";
    var i, r = function () {
@@ -3411,11 +3411,15 @@
 }, function (e, t, n) {
    "use strict";
    n.r(t);
-   n(4);
-   n(6), n(9)
+   n(16), n(18)
+}, function (e, t, n) {
+   "use strict";
+   n.r(t);
+   n(5);
+   n(7), n(10)
 }, function (e, t, n) {
    var i = n(0),
-      r = n(5);
+      r = n(6);
    "string" == typeof (r = r.__esModule ? r.default : r) && (r = [
       [e.i, r, ""]
    ]);
@@ -3428,10 +3432,10 @@
 }, function (e, t, n) {}, function (e, t, n) {
    "use strict";
    n.r(t);
-   n(7)
+   n(8)
 }, function (e, t, n) {
    var i = n(0),
-      r = n(8);
+      r = n(9);
    "string" == typeof (r = r.__esModule ? r.default : r) && (r = [
       [e.i, r, ""]
    ]);
@@ -3444,11 +3448,11 @@
 }, function (e, t, n) {}, function (e, t, n) {
    "use strict";
    n.r(t);
-   n(10);
-   n(12), n(19)
+   n(11);
+   n(13), n(19), n(23)
 }, function (e, t, n) {
    var i = n(0),
-      r = n(11);
+      r = n(12);
    "string" == typeof (r = r.__esModule ? r.default : r) && (r = [
       [e.i, r, ""]
    ]);
@@ -3462,26 +3466,20 @@
    "use strict";
    n.r(t),
       function (e) {
-         n(13);
-         n(15), e(document).ready((function () {
-            e(".iqdropdown").iqDropdown({
+         n(14);
+         n(3), e((function () {
+            e(".iqdropdown_guests").iqDropdown({
                setSelectionText: function (e, t) {
                   var n = [1 == t ? "гость" : t > 1 && t < 5 ? "гостя" : "гостей"],
                      i = [1 == e.item3 ? "младенец" : e.item3 > 1 && e.item3 < 5 ? "младенца" : "младенецев"];
                   return 0 == t ? "Сколько гостей" : t > 0 && 0 == e.item3 ? "".concat(t, " ").concat(n) : t > 0 && e.item3 > 0 ? "".concat(t, " ").concat(n, ", ").concat(e.item3, " ").concat(i) : void 0
-               },
-               beforeIncrement: function (e, t) {
-                  return "item3" !== e && "item2" !== e || t.item1 >= 1
-               },
-               beforeDecrement: function (e, t) {
-                  return "item1" !== e || t.item1 > t.item3
                }
             })
          }))
       }.call(this, n(1))
 }, function (e, t, n) {
    var i = n(0),
-      r = n(14);
+      r = n(15);
    "string" == typeof (r = r.__esModule ? r.default : r) && (r = [
       [e.i, r, ""]
    ]);
@@ -3492,19 +3490,6 @@
       a = (i(r, o), r.locals ? r.locals : {});
    e.exports = a
 }, function (e, t, n) {}, function (e, t, n) {
-   "use strict";
-   n.r(t),
-      function (e) {
-         n(16), n(18);
-         e((function () {
-            e(".iqdropdown").on("click", (function () {
-               e(".iqdropdown").css("border-radius", "4px 4px 0 0")
-            })), e(".iqdropdown-menu-clear").on("click", (function () {
-               e(".iqdropdown-selection").html("Сколько гостей"), e(".iqdropdown .iqdropdown-item-controls .counter").html("0")
-            }))
-         }))
-      }.call(this, n(1))
-}, function (e, t, n) {
    var i = n(0),
       r = n(17);
    "string" == typeof (r = r.__esModule ? r.default : r) && (r = [
@@ -6255,6 +6240,33 @@
 }, function (e, t, n) {
    var i = n(0),
       r = n(22);
+   "string" == typeof (r = r.__esModule ? r.default : r) && (r = [
+      [e.i, r, ""]
+   ]);
+   var o = {
+         insert: "head",
+         singleton: !1
+      },
+      a = (i(r, o), r.locals ? r.locals : {});
+   e.exports = a
+}, function (e, t, n) {}, function (e, t, n) {
+   "use strict";
+   n.r(t),
+      function (e) {
+         n(24);
+         n(3), e((function () {
+            e(".iqdropdown_comfort").iqDropdown({
+               setSelectionText: function (e, t) {
+                  var n = [1 == t ? "спальня" : t > 1 && t < 5 ? "спальни" : "спален"],
+                     i = [1 == e.item2 ? "кровать" : e.item2 > 1 && e.item2 < 5 ? "кровати" : "кроватей"];
+                  return 0 == t ? "Выберите..." : t > 0 && 0 == e.item2 ? "".concat(t, " ").concat(n) : t > 0 && e.item2 > 0 ? "".concat(t, " ").concat(n, ", ").concat(e.item2, " ").concat(i) : void 0
+               }
+            })
+         }))
+      }.call(this, n(1))
+}, function (e, t, n) {
+   var i = n(0),
+      r = n(25);
    "string" == typeof (r = r.__esModule ? r.default : r) && (r = [
       [e.i, r, ""]
    ]);

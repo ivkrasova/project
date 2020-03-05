@@ -1,10 +1,4 @@
 @import "src/_variables";
-@import "src/components/mixin_text_field/mixin_text_field.scss";
-
-.dropdown_content {
-  @include text_field;
-  color: $color-dark75;
-}
 
 html {
   box-sizing: border-box
@@ -133,8 +127,7 @@ body {
 }
 
 .iqdropdown .iqdropdown-menu {
-  width: 22.8rem;
-  height: 159px;
+  width: 100%;
   background-color: #FFFFFF;
   box-shadow: 0 10px 20px $color-dark5;
   border: 1px solid $color-dark50;
@@ -163,10 +156,10 @@ body {
 }
 
 .iqdropdown-menu-buttons {
-  width: 320px;
+  // width: 320px;
   display: flex;
   justify-content: space-between;
-  padding: 14px 9px 0 14px;
+  padding: 14px 9px 10px 14px;
 }
 
 .iqdropdown .iqdropdown-menu-close {
@@ -224,7 +217,6 @@ body {
   //-кнопки переключения
   align-items: center;
   display: flex;
-  height: 30px;
   transition: all 0.2s ease-in-out;
   border: 1px solid $color-dark50;
   border-radius: 30px;
@@ -238,7 +230,6 @@ body {
   display: flex;
   position: relative;
   height: 40px;
-  width: 100%;
 }
 
 .iqdropdown .iqdropdown-selection {

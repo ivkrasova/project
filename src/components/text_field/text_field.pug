@@ -1,4 +1,9 @@
-include ../../components/mixin_text_field/mixin_text_field.pug
+mixin text_field (options)
+  .text_field
+    .text_field__title
+      label(class="text_field__label")= options.label 
+      span.text_field__state=options.state
+    input(class="text_field__input text_field__input-hover text_field__input-"+options.mask type=options.type name=options.name value=options.value)
 
-+text_field({label: "Text Field", type: "text", name: "Email", value: "Email"})
+//- options{label , state, mask, type, name, value}
 

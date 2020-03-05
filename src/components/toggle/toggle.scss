@@ -1,0 +1,66 @@
+@import "src/_variables";
+
+
+.toggle {
+
+  &_title {
+    @include caption;
+    padding-bottom: 1.1rem;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    &__text {
+      padding-left: 0.7rem;
+    }
+
+    &__input {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+      margin: 0;
+    }
+
+    &__label {
+      cursor: pointer;
+      text-indent: -9999px;
+      width: 40px;
+      height: 20px;
+      background: #FFF;
+      display: block;
+      border: 1px solid $color-dark25;
+      border-radius: 10px;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        width: 12px;
+        height: 12px;
+        background: $color-dark25;
+        border-radius: 10px;
+        transition: 0.1s;
+      }
+    }
+  }
+}
+
+.toggle_content__input:checked+.toggle_content__label {
+
+  border: 1px solid $primary-color;
+
+  &:after {
+    background: $primary-gradient;
+  }
+
+}
+
+.toggle_content__input:checked+.toggle_content__label:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+}

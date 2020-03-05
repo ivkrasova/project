@@ -1,11 +1,14 @@
 @import "../../_variables";
 @import "../../components/text_field/text_field";
 @import "../../components/drop_guests/drop_guests";
+@import "../../components/drop_comfort/drop_comfort";
 @import "../../components/masked_text_field/masked_text_field";
 @import "../../components/checkbox_buttons/checkbox_buttons";
 @import "../../components/radio_buttons/radio_buttons";
-@import "../../components/room_info/room_info.scss";
-
+@import "../../components/room_info/room_info";
+@import "../../components/mixin_dropdown/mixin_dropdown";
+@import "../../components/subscription_field/subscription_field";
+@import "../../components/toggle/toggle";
 
 .logo {
   margin-top: 30px;
