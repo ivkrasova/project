@@ -25,9 +25,15 @@ block content
     +toggle({title: "toggle", checked: "checked", text: "Получать спецпредложения"})
     +toggle({text: "Получать спецпредложения"})
 
+    include ../../components/like_button/like_button.pug
+    +like_button({title: 'Like button', count: '2'})
+    +like_button({active: 'liked', count: '12'})
+
     include ../../components/checkbox_buttons/checkbox_buttons.pug
     include ../../components/radio_buttons/radio_buttons.pug
     include ../../components/room_info/room_info.pug
     +room_info("insert_emoticon","Комфорт","Шумопоглощающие стены")
     +room_info("location_city","Удобство","Окно в каждой из спален")
+
+    
     
