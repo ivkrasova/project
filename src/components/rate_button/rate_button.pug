@@ -1,0 +1,13 @@
+mixin rating(options)
+  .rating
+    - for(var i = 0; i < 5; i++)
+      if i < options.rate
+        input(id='star-'+options.n[i] type='radio', name='rating', value=''+options.n[i])
+        label(class='rating_style' for='star-'+options.n[i], title='Оценка '+options.n[i])
+      else
+        input(id='star-'+options.n[i] type='radio', name='rating', value=''+options.n[i])
+        label(class='rating_style-active' for='star-'+options.n[i], title='Оценка '+options.n[i])
+
+//- +rating({n: [5, 4, 3, 2, 1], rate: '1'}) 
+
+//rate - кол-во пустых звезд ХЗ

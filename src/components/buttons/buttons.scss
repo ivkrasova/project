@@ -1,0 +1,60 @@
+@import "src/_variables";
+
+.button_origin {
+  @include caption;
+  color: #ffffff;
+  width: 7.1rem;
+  height: 3.1rem;
+  border-radius: 1.6rem;
+  background: $primary-gradient;
+  outline: none;
+  border-style: none;
+  position: relative;
+
+  &-opacity {
+    opacity: 0.5;
+  }
+
+  &-transparent {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+  }
+
+  &-light:before {
+    content: 'click me';
+    padding: 0.85rem;
+    text-align: center;
+    color: $primary-color;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    display: block;
+    width: 6.8rem;
+    height: 2.8rem;
+    background: #ffffff;
+    border-radius: 1.6rem;
+  }
+
+  &-simple {
+    background: none;
+    color: $primary-color;
+  }
+
+  &-default {
+    background: none;
+    color: $color-dark50;
+  }
+
+  &-large {
+    width: 22.86rem;
+
+    &:before {
+      content: '\e5c8';
+      color: #fff;
+      @include material-icons;
+      position: absolute;
+      left: 90%;
+      top: 22%;
+
+    }
+  }
+}

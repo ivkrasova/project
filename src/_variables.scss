@@ -43,10 +43,6 @@ body {
   color: $color-dark50;
 }
 
-@mixin arrow {
-  //стрелка для переиспользования? надо?
-}
-
 @mixin material-icons {
   direction: ltr;
   display: inline-block;
@@ -61,4 +57,11 @@ body {
   word-wrap: normal;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
+}
+
+//отдельный класс для фона градиента иконок(ex, .material-icons_style)
+@mixin icons_style {
+  background: $primary-gradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

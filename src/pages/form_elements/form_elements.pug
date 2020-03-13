@@ -29,11 +29,33 @@ block content
     +like_button({title: 'Like button', count: '2'})
     +like_button({active: 'liked', count: '12'})
 
+    include ../../components/rate_button/rate_button.pug
+    +rating({n: [5, 4, 3, 2, 1], rate: '1'}) 
+    +rating({n: [5, 4, 3, 2, 1], rate: '0'}) 
+
     include ../../components/checkbox_buttons/checkbox_buttons.pug
+    +checkbox_buttons({title: "Checkbox button", num: '3', choice: ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"]})
+
+    +checkbox_buttons({title: "Rich checkbox buttons", num: '2', choice: ["Широкий коридор ","Помощник для инвалидов"], style: "caption", lehgth: '1', details: ["Ширина коридоров в номере не менее 91 см.", "На 1 этаже вас встретит специалист и проводит до номера."]})
+
     include ../../components/radio_buttons/radio_buttons.pug
     include ../../components/room_info/room_info.pug
     +room_info("insert_emoticon","Комфорт","Шумопоглощающие стены")
     +room_info("location_city","Удобство","Окно в каждой из спален")
 
-    
-    
+    <br/>
+    <br/>
+    <br/>
+    include ../../components/buttons/buttons.pug
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>

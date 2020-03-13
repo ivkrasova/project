@@ -1,0 +1,95 @@
+@import "src/_variables";
+
+.rating {
+  overflow: hidden;
+}
+
+.rating:not(:checked)>input {
+  display: none;
+}
+
+.rating {
+  // float: right; ?
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 8.5rem;
+}
+
+.rating:not(:checked)>.rating_style:before {
+  content: '\e83a';
+  @include material-icons;
+  @include icons_style;
+}
+
+.rating>.rating_style:hover~.rating_style:before {
+  content: '\e838';
+  @include material-icons;
+  @include icons_style;
+}
+
+.rating>.rating_style:hover:before {
+  content: '\e838';
+  @include material-icons;
+  @include icons_style;
+}
+
+.rating>input:checked~.rating_style:before {
+  //OK
+  content: '\e838';
+  @include material-icons;
+  @include icons_style;
+}
+
+.rating_style-active:before {
+  content: '\e838';
+  @include material-icons;
+  @include icons_style;
+}
+
+// .rating {
+//   overflow: hidden;
+// }
+
+// .rating:not(:checked)>input {
+//   display: none;
+// }
+
+// .rating {
+//   // float: right; ?
+//   cursor: pointer;
+//   display: flex;
+//   flex-direction: row-reverse;
+//   width: 8.5rem;
+// }
+
+// .rating:not(:checked)>.rating_style:before {
+//   content: '\e83a';
+//   @include material-icons;
+//   @include icons_style;
+// }
+
+// .rating>.rating_style:hover~.rating_style:before {
+//   content: '\e838';
+//   @include material-icons;
+//   @include icons_style;
+// }
+
+// .rating>.rating_style:hover:before {
+//   content: '\e838';
+//   @include material-icons;
+//   @include icons_style;
+// }
+
+// .rating>input:checked~.rating_style:before {
+//   //OK
+//   content: '\e838';
+//   @include material-icons;
+//   @include icons_style;
+// }
+
+// .rating_style-active:before {
+//   content: '\e838';
+//   @include material-icons;
+//   @include icons_style;
+// }
