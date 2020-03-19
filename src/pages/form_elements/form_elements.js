@@ -10,3 +10,4 @@ require('../../components/rate_button/rate_button.js');
 require('../../components/pagination/pagination.js');
 require('../../components/range_slider/range_slider.js');
 require('../../components/comments/comments.js');
+require('../../components/date_dropdown/date_dropdown.js');

@@ -1,0 +1,12 @@
+mixin date_dropdown(options)
+  .date_dropdown
+    input.date_dropdown__input(type='text' class ='date_dropdown__input-'+options.size class ='date_dropdown__input_'+options.date class="datepicker-here")
+    .date_dropdown__expand
+
+//-для UKit
++date_dropdown({size: 'small'}) 
++date_dropdown({size: 'small', date:"date"})
+<br/>
+<br/>
+<br/>
++date_dropdown({size: 'small'}) 
