@@ -25,15 +25,21 @@ $(function () {
         return `${totalItems} ${guests}, ${itemCount.item3} ${infant}`;
       }
     },
+    // onChange: buttonClear(),
   });
 
-  // $('.iqdropdown_guests').on('click', function () {
-  //   $('.iqdropdown_guests').css('border-radius', '4px 4px 0 0');
-  // });
 
-  // $('.iqdropdown_guests .iqdropdown-menu-clear').on('click', function () {
-  //   $('.iqdropdown_guests .iqdropdown-selection').html('Сколько гостей');
-  //   $('.iqdropdown_guests .iqdropdown-item-controls .counter').html('0');
+  $('.iqdropdown_guests .iqdropdown-menu-clear').on('click', function () {
+    $('.iqdropdown_guests .iqdropdown-selection').html('Сколько гостей');
+    $('.iqdropdown_guests .iqdropdown-item-controls .counter').text('0');
+  });
 
-  // });
+  // function buttonClear() {
+  //   let but = $('<button class="iqdropdown-menu-clear">Кнопка</button>');
+  //   let p = $('.iqdropdown_guests .iqdropdown-selection');
+
+  //   if (p.not("Сколько гостей")) {
+  //     $('.iqdropdown-menu-buttons').prepend(but);
+  //   };
+  // };
 })

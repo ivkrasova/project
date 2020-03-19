@@ -1,0 +1,10 @@
+mixin bullet_list(options)
+  .bullet_list
+    .bullet_list_title=options.title
+    .bullet_list_content
+      - for(let i = 0; i < options.num; i++)
+        li #{options.list[i]}
+
+- var list = [i];
+
++bullet_list({title: 'bullet list', num: "3", list: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})

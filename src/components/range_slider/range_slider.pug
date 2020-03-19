@@ -1,0 +1,8 @@
+mixin range_slider(options)
+  .range_slider
+    .range_slider_topic
+      .range_slider_topic_title=options.title
+      .range_slider_topic_range диапазон
+    input(type="text" id="range_slider" name="range_slider" value="")
+    .range_slider_price=options.price
++range_slider({title:"range slider"})

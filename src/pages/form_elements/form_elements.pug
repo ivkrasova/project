@@ -8,13 +8,24 @@ block content
   .logo
     +logo()
   .group_elements
+    <br/>
+    <br/>
+    include ../../components/drop_guests/drop_guests.pug
+    <br/>
+    <br/>
+    include ../../components/drop_comfort/drop_comfort.pug
+    <br/>
+    <br/>
+    include ../../components/comments/comments.pug
+    <br/>
+    <br/>
+    include ../../components/bullet_list/bullet_list.pug
+    include ../../components/range_slider/range_slider.pug
+    include ../../components/pagination/pagination.pug
     include ../../components/text_field/text_field.pug
     +text_field({label:"text field", state:"default", type: "Email", name:"Email", value:"Email"})
 
     +text_field({label: "Text Field", state:"Hover / Focus", type: "text", name: "text", value: "This is pretty awesome"})
-    
-    include ../../components/drop_guests/drop_guests.pug
-    //- include ../../components/drop_comfort/drop_comfort.pug
 
     +text_field({label: "Masked text field", state:"default", type: "text", name: "text", value:"ДД.ММ.ГГГГ", mask: "mask"})
 
@@ -43,19 +54,11 @@ block content
     +room_info("insert_emoticon","Комфорт","Шумопоглощающие стены")
     +room_info("location_city","Удобство","Окно в каждой из спален")
 
-    <br/>
-    <br/>
-    <br/>
-    include ../../components/buttons/buttons.pug
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+    include ../../components/buttons/buttons.pug  
+    +button({name: 'click me'})
+    +button({name: 'click me', disabled: 'opacity'})
+    +button({background: 'light'})
+    +button({background: 'light', disabled: 'transparent'})
+    +button({name: 'click me', background: 'simple'})
+    +button({name: 'click me', background: 'default'})
+    +button({name: 'перейти к оплате', size: 'large'})  

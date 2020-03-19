@@ -90,44 +90,28 @@ body {
 }
 
 .iqdropdown .icon-decrement {
-  display: inline-block;
-  height: 30px;
-  margin: auto;
-  min-width: 15px;
-  position: relative;
-  width: 30px;
+  position: absolute;
+  height: 2.2rem;
+  width: 2.2rem;
 }
 
 .iqdropdown .icon-decrement::after {
   color: $color-dark50;
   content: '-';
-  display: block;
-  height: 15px;
   position: absolute;
-  top: 20%;
-  left: 25%;
-  transition: -webkit-transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
-  width: 15px
+  bottom: 1.65rem;
+  right: 2.1rem;
 }
 
 .iqdropdown .icon-increment::after {
   color: $color-dark50;
   content: '+';
-  display: block;
-  height: 15px;
   position: absolute;
-  top: 25%;
-  left: 25%;
-  transition: -webkit-transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
-  width: 15px
+  bottom: 1.7rem;
+  right: 1.95rem;
 }
 
 .iqdropdown .iqdropdown-menu {
-  width: 100%;
   background-color: #FFFFFF;
   box-shadow: 0 10px 20px $color-dark5;
   border: 1px solid $color-dark50;
@@ -136,6 +120,8 @@ body {
   display: none; //-вернуть назад
   left: 0;
   margin: -2px -1px -1px;
+  padding: 0rem 0.36rem 0.5rem 1rem;
+
   position: absolute;
   right: 0;
   top: 44px;
@@ -143,12 +129,15 @@ body {
   z-index: 99999
 }
 
+.iqdropdown_field {
+  @include text_input;
+}
+
 .iqdropdown .iqdropdown-menu-option {
   align-items: center;
   display: flex;
-  height: 38px;
-  padding: 0 5px 0 15px;
-  margin: 0;
+  justify-content: space-between;
+  margin-top: 0.5rem;
 }
 
 .iqdropdown .iqdropdown-menu-option:last-child {
@@ -156,20 +145,22 @@ body {
 }
 
 .iqdropdown-menu-buttons {
-  // width: 320px;
   display: flex;
   justify-content: space-between;
-  padding: 14px 9px 10px 14px;
+  width: 100%;
+  margin: 0 auto;
+
 }
 
-.iqdropdown .iqdropdown-menu-close {
-  @include caption;
-  color: $primary-color;
-}
-
+.iqdropdown .iqdropdown-menu-close,
 .iqdropdown .iqdropdown-menu-clear {
   @include caption;
   color: $color-dark50;
+  margin: 1.4rem 0 0.36rem 0;
+
+  &:hover {
+    color: $primary-color;
+  }
 }
 
 .iqdropdown.menu-open .iqdropdown-menu {
@@ -189,7 +180,6 @@ body {
 
 .iqdropdown-item {
   @include caption;
-
 }
 
 .iqdropdown p.iqdropdown-description {
@@ -202,61 +192,48 @@ body {
 
 .iqdropdown .iqdropdown-item-controls {
   display: flex;
-  height: 31px;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  width: 6.6rem;
 }
 
 .iqdropdown .iqdropdown-item-controls .counter {
   //-средняя цифра
   @include caption;
-  padding: 7px;
-  text-align: center;
-  width: 30px;
+  padding: 0.45rem;
 }
 
 .iqdropdown .iqdropdown-item-controls button {
   //-кнопки переключения
-  align-items: center;
-  display: flex;
+  height: 2.14rem;
+  width: 2.14rem;
   transition: all 0.2s ease-in-out;
   border: 1px solid $color-dark50;
-  border-radius: 30px;
+  border-radius: 2.14rem;
 }
 
 .iqdropdown {
   align-items: center;
-  border: 1px solid #E2E2E2;
-  border-radius: 4px;
   cursor: pointer;
   display: flex;
   position: relative;
-  height: 40px;
+
+  &:hover {
+    border: 1px solid $color-dark50;
+  }
+
+  &-clicked {
+    border-radius: 4px 4px 0 0;
+  }
 }
 
-.iqdropdown .iqdropdown-selection {
-  flex: 1;
-  position: relative;
-}
-
-.iqdropdown .iqdropdown-selection::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+.iqdropdown .iqdropdown-selection:after {
   font-family: 'Material Icons';
-  color: $color-dark75;
-  background-position: center;
-  background-repeat: no-repeat;
-  content: '';
-  display: inline-block;
-  height: 10px;
-  width: 12px;
+  color: $color-dark50;
+  font-size: 1.8rem;
+  content: '\e5cf';
   position: absolute;
-  right: 5%;
-  top: 20%;
-
+  right: 0.6rem;
+  top: 0.6rem;
 }
-
-.iqdropdown.menu-open {
-  border-color: $color-dark25;
-}
-
-// .iqdropdown.menu-open .iqdropdown-selection::after {
-//   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAMCAMAAABGBS09AAAAe1BMVEVMaXH///+ZmZmqqqqVlZWdnZ2Xl5eVlZWVlZWUlJSQkJCUlJSTk5ORkZGRkZGRkZGSkpKRkZGSkpKSkpKRkZGQkJCRkZGRkZGRkZGQkJCSkpKRkZGRkZGRkZGRkZGRkZGRkZGRkZGQkJCRkZGQkJCRkZGQkJCRkZGQkJAwdLQhAAAAKHRSTlMAAQUGDA0bHSQmNTdHSEpYWV1gbnKIi5SZqqqytcfJzNfZ5uf19fn+jEECQQAAAIhJREFUeNqNj+cSwkAIhLn0Znoz7dLD+z9hII6OJTruH5b9mDuAv2VKaX5BSjojLqlyxi49Huq9D2TVlG/VdaNSWy9Iy1YKOxfA7cismfZAIhopmWJxNPFEzRiJG3NaHs71+6ye8zOtwz7kbxobnmQ3vEBArkAcfHiTPyAWVI0yOTlNTUoDfmoHOBIMkOONx34AAAAASUVORK5CYII=)
-// }

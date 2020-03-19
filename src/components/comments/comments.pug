@@ -1,0 +1,19 @@
+include ../../components/like_button/like_button.pug
+
+mixin comments(options)
+  .comments
+    .comments_user
+      .comments_user_image foto
+        //- img(src=require("../../components/comments/img/comment.jpg").default, alt="photo")
+      .comments_user_guest
+        span.comments_user_guest_name=options.name
+        span.comments_user_guest_date=options.date
+    .comments_text
+      +like_button({active: 'liked', count: '12'})
+      .comments_text_comment=options.text
+
++comments({name:"Мурад Сарафанов", date:"5 дней назад", text:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+
+
+//- img(src=require("../../components/comments/img' + options.photo).default, alt="photo")
+//- photo: "comment.jpg"

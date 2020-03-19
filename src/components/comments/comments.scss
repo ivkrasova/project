@@ -1,0 +1,46 @@
+@import "src/_variables";
+
+.comments {
+  width: 50.9rem;
+  box-sizing: border-box;
+
+
+  &_user {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    &_image {
+      //тут будет фото
+      width: 47px;
+      height: 48px;
+      background-color: blue;
+    }
+
+    &_guest {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-left: 0.7rem;
+
+      &_name {
+        font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+      }
+    }
+  }
+
+  &_text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 24px;
+    margin-top: 0.6rem;
+    margin-left: 0.25rem;
+
+
+    &_comment {
+      padding-left: 1rem;
+    }
+
+  }
+}

@@ -1,5 +1,4 @@
 include ../../components/mixin_dropdown/mixin_dropdown.pug
-include ../../components/text_field/text_field.pug
 
 
-+dropdown({content:"text_field__input text_field__input-hover", title: "text_field__label", label: "Dropdown", dropdown: "iqdropdown_guests", value: "Сколько гостей", item1: "Взрослые", item2: "Дети", item3: "Младенцы", clear: "Очистить", close: "Применить" })
++dropdown({ label: "Dropdown", local: "guests", value: "Сколько гостей", item1: "Взрослые", item2: "Дети", item3: "Младенцы", buttons: true, clear: "Очистить", close: "Применить"  })

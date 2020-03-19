@@ -37,11 +37,13 @@
   &-simple {
     background: none;
     color: $primary-color;
+    height: auto;
   }
 
   &-default {
     background: none;
     color: $color-dark50;
+    height: auto;
   }
 
   &-large {
