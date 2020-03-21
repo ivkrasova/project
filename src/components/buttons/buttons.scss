@@ -1,49 +1,68 @@
 @import "src/_variables";
 
-.button_origin {
+.button_standart {
   @include caption;
-  color: #ffffff;
   width: 7.1rem;
   height: 3.1rem;
   border-radius: 1.6rem;
-  background: $primary-gradient;
   outline: none;
   border-style: none;
   position: relative;
 
-  &-opacity {
-    opacity: 0.5;
+  &-full {
+    color: #ffffff;
+    background: $primary-gradient;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &-disabled {
+      opacity: 0.5;
+    }
   }
 
-  &-transparent {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-  }
-
-  &-light:before {
-    content: 'click me';
-    padding: 0.85rem;
-    text-align: center;
+  &-light {
+    background: $primary-gradient;
     color: $primary-color;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    display: block;
-    width: 6.8rem;
-    height: 2.8rem;
-    background: #ffffff;
-    border-radius: 1.6rem;
+    z-index: 0;
+
+    &:before {
+      content: '';
+      padding: 0.85rem;
+      text-align: center;
+      color: $primary-color;
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: 6.8rem;
+      height: 2.8rem;
+      background: #ffffff;
+      border-radius: 1.6rem;
+      z-index: -1;
+    }
+
+    &:hover {
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+    }
+
+    &-disabled {
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+    }
   }
 
   &-simple {
+    height: auto;
     background: none;
     color: $primary-color;
-    height: auto;
-  }
 
-  &-default {
-    background: none;
-    color: $color-dark50;
-    height: auto;
+    &:hover {
+      color: $color-dark50;
+    }
+
+    &-disabled {
+      color: $color-dark50;
+    }
   }
 
   &-large {
@@ -55,8 +74,7 @@
       @include material-icons;
       position: absolute;
       left: 90%;
-      top: 22%;
-
+      top: 35%;
     }
   }
 }

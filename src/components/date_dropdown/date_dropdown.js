@@ -8,7 +8,7 @@ $('.date_dropdown__input').inputmask('datetime', {
   // max: today, //-указать max дату?
   placeholder: 'ДД.ММ.ГГГГ',
   clearMaskOnLostFocus: false
-})
+});
 
 $('.date_dropdown__input_date').inputmask('datetime', {
   inputFormat: 'dd.mm.yyyy',
@@ -16,8 +16,29 @@ $('.date_dropdown__input_date').inputmask('datetime', {
   // max: today, //-указать max дату?
   placeholder: '19.08.2019',
   clearMaskOnLostFocus: false
-})
+});
 
-$('.date_dropdown__input').datepicker({
+$('#start').datepicker({
   inline: true, //отобразить к
+  range: true,
+  startDate: new Date(2019, 7, 8),
+  prevHtml: '<i class="material-icons date_dropdown_arrow">arrow_back</i>',
+  nextHtml: '<i class="material-icons date_dropdown_arrow">arrow_forward</i>',
+  navTitles: {
+    days: 'MM yyyy',
+    months: 'yyyy',
+    years: 'yyyy1 - yyyy2'
+  },
+  multipleDatesSeparator: "-",
+  onSelect: function (formattedDate, d, picker) {
+    $("#start").val(formattedDate.split('-')[0]);
+    $("#end").val(formattedDate.split('-')[1]);
+  },
+  // clearButton: true,
+});
+
+let myDatepicker = $('#start').datepicker().data('datepicker');
+
+$("#end").on('click', function () {
+  myDatepicker.show();
 })

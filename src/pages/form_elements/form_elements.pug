@@ -52,10 +52,10 @@ block content
     +room_info("location_city","Удобство","Окно в каждой из спален")
 
     include ../../components/buttons/buttons.pug  
-    +button({name: 'click me'})
-    +button({name: 'click me', disabled: 'opacity'})
-    +button({background: 'light'})
-    +button({background: 'light', disabled: 'transparent'})
+    +button({name: 'click me', background: 'full'})
+    +button({name: 'click me', background: 'full', disabled: '-disabled'})
+    +button({name: 'click me', background: 'light'})
+    +button({name: 'click me', background: 'light', disabled: '-disabled'})
     +button({name: 'click me', background: 'simple'})
-    +button({name: 'click me', background: 'default'})
-    +button({name: 'перейти к оплате', size: 'large'})  
+    +button({name: 'click me', background: 'simple', disabled: '-disabled'})
+    +button({name: 'перейти к оплате', background: 'full', size: 'large'})
