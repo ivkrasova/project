@@ -1,0 +1,7 @@
+mixin filter_date(options)
+  .filter_date
+    form
+      label.filter_date_title=options.title
+      input.filter_date_input(class = "filter_date_input-"+options.size type="text" class="datepicker-here")
+
++filter_date({title: "filter date dropdown", size: "medium"})

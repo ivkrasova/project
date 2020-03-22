@@ -10,9 +10,8 @@ block content
   .group_elements
     <br/>
     <br/>
+    include ../../components/filter_date/filter_date.pug
     include ../../components/date_dropdown/date_dropdown.pug
-    <br/>
-    <br/>
     include ../../components/drop_guests/drop_guests.pug
     include ../../components/drop_comfort/drop_comfort.pug
     include ../../components/comments/comments.pug
@@ -43,7 +42,7 @@ block content
 
     include ../../components/checkbox_buttons/checkbox_buttons.pug
     +checkbox_buttons({title: "Checkbox button", num: '3', choice: ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"]})
-
+    
     +checkbox_buttons({title: "Rich checkbox buttons", num: '2', choice: ["Широкий коридор ","Помощник для инвалидов"], style: "caption", lehgth: '1', details: ["Ширина коридоров в номере не менее 91 см.", "На 1 этаже вас встретит специалист и проводит до номера."]})
 
     include ../../components/radio_buttons/radio_buttons.pug
@@ -59,3 +58,6 @@ block content
     +button({name: 'click me', background: 'simple'})
     +button({name: 'click me', background: 'simple', disabled: '-disabled'})
     +button({name: 'перейти к оплате', background: 'full', size: 'large'})
+
+    include ../../components/expandable_list/expandable_list.pug
+    +expandable_list({label: "expandable checkbox list", num: '8', choice: ["Завтрак ", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"]})

@@ -11,3 +11,5 @@ require('../../components/pagination/pagination.js');
 require('../../components/range_slider/range_slider.js');
 require('../../components/comments/comments.js');
 require('../../components/date_dropdown/date_dropdown.js');
+require('../../components/filter_date/filter_date.js');
+require('../../components/expandable_list/expandable_list.js');

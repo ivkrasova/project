@@ -1,0 +1,39 @@
+@import "src/_variables";
+
+.expandable_list {
+
+  &_label {
+    width: 19rem;
+    @include caption;
+    position: relative;
+
+    &:after {
+      font-family: 'Material Icons';
+      color: $color-dark50;
+      font-size: 1.8rem;
+      content: '\e5cf';
+      position: absolute;
+      right: 0.6rem;
+      top: 0;
+    }
+
+    &-active:after {
+      font-family: 'Material Icons';
+      color: $color-dark50;
+      font-size: 1.8rem;
+      content: '\e5ce';
+      position: absolute;
+      right: 0.6rem;
+      top: 0;
+    }
+  }
+
+  &_content {
+    display: none;
+    margin-top: -0.7rem;
+
+    &-active {
+      display: block;
+    }
+  }
+}

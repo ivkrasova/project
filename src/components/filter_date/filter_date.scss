@@ -1,0 +1,14 @@
+@import "src/_variables";
+
+.filter_date {
+
+  &_title {
+    @include caption;
+  }
+
+  &_input {
+    @include text_input;
+    @include expand_more;
+    text-transform: lowercase;
+  }
+}

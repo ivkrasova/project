@@ -37,37 +37,7 @@ body {
   color: $color-dark100;
 }
 
-//состояния default, hover, focus
-@mixin state {
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: $color-dark50;
-}
-
-@mixin material-icons {
-  // direction: ltr;
-  // display: inline-block;
-  font-family: 'Material Icons';
-  font-size: 24px;
-  font-style: normal;
-  font-weight: normal;
-  // letter-spacing: normal;
-  // line-height: 1;
-  // text-transform: none;
-  // white-space: nowrap;
-  // word-wrap: normal;
-  // -webkit-font-feature-settings: 'liga';
-  // -webkit-font-smoothing: antialiased;
-}
-
-//отдельный класс для фона градиента иконок(ex, .material-icons_style)
-@mixin icons_style {
-  background: $primary-gradient;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+//поля
 @mixin text_input {
   display: flex;
   width: 22.8rem;
@@ -96,4 +66,33 @@ body {
     border: 1px solid $color-dark50;
     color: $color-dark75;
   }
+}
+
+@mixin expand_more {
+  color: $color-dark75;
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z' fill='%231F2041' fill-opacity='0.5'/%3E%3C/svg%3E%0A");
+  background-position: 94% 50%;
+  background-repeat: no-repeat;
+}
+
+//состояния default, hover, focus
+@mixin state {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $color-dark50;
+}
+
+@mixin material-icons {
+  font-family: 'Material Icons';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+//отдельный класс для фона градиента иконок(ex, .material-icons_style)
+@mixin icons_style {
+  background: $primary-gradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
