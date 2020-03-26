@@ -2,9 +2,8 @@
 
 .radio_buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 222px;
-  height: 100%;
 
   &__name {
     @include caption;
@@ -28,7 +27,6 @@
   }
 
   &__label {
-    // @include main-font;
     color: $color-dark50;
     line-height: 24px;
     margin-right: 20px;
@@ -36,11 +34,10 @@
     position: relative;
     top: 2px;
     cursor: pointer;
-  }
 
-  //переделать на JS?
-  &__label:hover {
-    color: $color-dark75;
+    &:hover {
+      color: $color-dark75;
+    }
   }
 }
 

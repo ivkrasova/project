@@ -1,13 +1,18 @@
 mixin rating(options)
-  .rating
-    - for(var i = 0; i < 5; i++)
-      if i < options.rate
-        input(id='star-'+options.n[i] type='radio', name='rating', value=''+options.n[i])
-        label(class='rating_style' for='star-'+options.n[i], title='Оценка '+options.n[i])
-      else
-        input(id='star-'+options.n[i] type='radio', name='rating', value=''+options.n[i])
-        label(class='rating_style-active' for='star-'+options.n[i], title='Оценка '+options.n[i])
+  .rating_wrapper
+    .rating_star
+      - for(var i = 0; i < 5; i++)
+        if i < options.rate
+          input(id='star-'+options.n[i] type='radio', name='rating', value=''+options.n[i])
+          label(class='rating_star_style' for='star-'+options.n[i], title='Оценка '+options.n[i])
+        else
+          input(id='star-'+options.n[i] type='radio', name='rating', value=''+options.n[i])
+          label(class='rating_star_style-active' for='star-'+options.n[i], title='Оценка '+options.n[i])
+    if options.reviews
+      .rating_reviews
+        span #{options.reviews} 
+        span Отзывов
 
-//- +rating({n: [5, 4, 3, 2, 1], rate: '1'}) 
+//- +rating({n: [5, 4, 3, 2, 1], rate: '3', reviews: "145"}) 
 
-//rate - кол-во пустых звезд ХЗ
+//-rate - кол-во пустых звезд ХЗ

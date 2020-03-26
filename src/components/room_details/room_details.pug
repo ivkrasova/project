@@ -1,0 +1,13 @@
+mixin room_details(options)
+  .room_details
+      .room_details_number
+        span № 
+        span #{options.number} 
+        span=options.luxe
+      .room_details_price
+        span #{options.price}₽ 
+        span в сутки
+
+//- +room_details({number: "888", price:"9 900", luxe: "люкс"})
+
+

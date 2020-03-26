@@ -4,17 +4,15 @@
   width: 50.9rem;
   box-sizing: border-box;
 
-
   &_user {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 
-    &_image {
-      //тут будет фото
-      width: 47px;
-      height: 48px;
-      background-color: blue;
+    &_photo {
+      max-width: 48px;
+      max-height: 48px;
+      // background: url(/img/comments.png) center center;
     }
 
     &_guest {

@@ -1,0 +1,6 @@
+@import "src/_variables";
+
+.total_card {
+  @include card;
+  height: 36.5rem;
+}

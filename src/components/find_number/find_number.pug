@@ -1,0 +1,9 @@
+include ../../components/date_dropdown/date_dropdown.pug
+include ../../components/mixin_dropdown/mixin_dropdown.pug
+
+
+.find_number
+  h1.find_number_title Найдём номера под ваши пожелания
+  +date_dropdown({label1:"прибытие", label2:"выезд", size: 'small'})
+  +dropdown({label: "Гости", local: "guests", value: "Сколько гостей", item1: "Взрослые", item2: "Дети", item3: "Младенцы", buttons: true, clear: "Очистить", close: "Применить"})
+  +button({name: 'Подобрать номер', background: 'full', size: 'large'})

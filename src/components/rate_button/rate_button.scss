@@ -1,95 +1,61 @@
 @import "src/_variables";
 
-.rating {
-  overflow: hidden;
+.rating_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.rating:not(:checked)>input {
+.rating_reviews {
+  margin-left: 1.4rem;
+
+  :first-child {
+    font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+    font-weight: bold;
+  }
+}
+
+.rating_star:not(:checked)>input {
   display: none;
 }
 
-.rating {
-  // float: right; ?
+.rating_star {
+  //-float: right; ?
   cursor: pointer;
   display: flex;
   flex-direction: row-reverse;
   width: 8.5rem;
+  height: 1.7rem;
 }
 
-.rating:not(:checked)>.rating_style:before {
+.rating_star:not(:checked)>.rating_star_style:before {
   content: '\e83a';
   @include material-icons;
   @include icons_style;
 }
 
-.rating>.rating_style:hover~.rating_style:before {
+.rating_star>.rating_star_style:hover~.rating_star_style:before {
   content: '\e838';
   @include material-icons;
   @include icons_style;
 }
 
-.rating>.rating_style:hover:before {
+.rating_star>.rating_star_style:hover:before {
   content: '\e838';
   @include material-icons;
   @include icons_style;
 }
 
-.rating>input:checked~.rating_style:before {
-  //OK
+.rating_star>input:checked~.rating_star_style:before {
   content: '\e838';
   @include material-icons;
   @include icons_style;
 }
 
-.rating_style-active:before {
-  content: '\e838';
-  @include material-icons;
-  @include icons_style;
+.rating_star_style-active {
+  &:before {
+    content: '\e838';
+    @include material-icons;
+    @include icons_style;
+  }
 }
-
-// .rating {
-//   overflow: hidden;
-// }
-
-// .rating:not(:checked)>input {
-//   display: none;
-// }
-
-// .rating {
-//   // float: right; ?
-//   cursor: pointer;
-//   display: flex;
-//   flex-direction: row-reverse;
-//   width: 8.5rem;
-// }
-
-// .rating:not(:checked)>.rating_style:before {
-//   content: '\e83a';
-//   @include material-icons;
-//   @include icons_style;
-// }
-
-// .rating>.rating_style:hover~.rating_style:before {
-//   content: '\e838';
-//   @include material-icons;
-//   @include icons_style;
-// }
-
-// .rating>.rating_style:hover:before {
-//   content: '\e838';
-//   @include material-icons;
-//   @include icons_style;
-// }
-
-// .rating>input:checked~.rating_style:before {
-//   //OK
-//   content: '\e838';
-//   @include material-icons;
-//   @include icons_style;
-// }
-
-// .rating_style-active:before {
-//   content: '\e838';
-//   @include material-icons;
-//   @include icons_style;
-// }

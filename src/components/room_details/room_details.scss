@@ -1,0 +1,38 @@
+@import "../../_variables";
+
+.room_details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &_number {
+    :first-child {
+      font-family: 'Conv_Quicksand-Bold', 'OpenSans-Bold', sans-serif;
+      color: $color-dark100;
+    }
+
+    :nth-child(2) {
+      font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      color: $color-dark100;
+    }
+
+    :nth-child(3) {
+      @include caption;
+      color: $primary-color;
+    }
+  }
+
+  &_price {
+    :first-child {
+      font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
+      font-weight: bold;
+    }
+
+    :last-child {
+      font-size: 12px;
+    }
+  }
+}

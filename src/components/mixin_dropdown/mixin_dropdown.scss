@@ -131,6 +131,11 @@ body {
 
 .iqdropdown_field {
   @include text_input;
+  position: relative;
+}
+
+.iqdropdown_label {
+  @include caption;
 }
 
 .iqdropdown .iqdropdown-menu-option {
@@ -228,12 +233,17 @@ body {
   }
 }
 
+.iqdropdown .iqdropdown-selection {
+  text-transform: none;
+
+}
+
 .iqdropdown .iqdropdown-selection:after {
   font-family: 'Material Icons';
   color: $color-dark50;
   font-size: 1.8rem;
   content: '\e5cf';
   position: absolute;
-  right: 0.6rem;
-  top: 0.6rem;
+  left: 90%;
+  top: 35%;
 }

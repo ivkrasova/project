@@ -1,0 +1,11 @@
+@import "src/_variables";
+
+
+.find_number {
+  @include card;
+  height: 26.7rem;
+}
+
+.find_number_title {
+  @include title
+}

@@ -1,108 +1,127 @@
-const path = require("path");
-const webpack = require('webpack');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const CopyPlugin = require('copy-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+//для favicon - const CopyWebpackPlugin = require('copy-webpack-plugin');
 // const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
-  entry: './src/index.js',
+  //-путь всех исходников
+  context: path.resolve(__dirname, 'src'),
+  //-точка входа 
+  entry: './index.js',
+  //-точка выхода
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].js"
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  // resolve: {
+  //-alias для указания абсолютного пути, у меня не работает(
+  // alias: {
+  //   '@components': path.resolve(__dirname, './components')
+  // }
+  // },
+  //-файл jq отдельно в vendors~main.js для оптимизации
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   devServer: {
+    //- можно выбрать любой порт
+    // -port: 4200,
     overlay: true,
   },
   module: {
     rules: [{
-      test: /\.js$/,
-      exclude: "/node_modules/",
-      use: {
-        loader: "babel-loader",
-        options: {
-          presets: ["@babel/preset-env"]
-        }
-      }
-    }, {
-      test: /\.scss$/,
-      use: [
-        "style-loader",
-        MiniCssExtractPlugin.loader,
-        {
-          loader: "css-loader"
-        }, {
-          loader: "postcss-loader",
+        test: /\.js$/,
+        exclude: '/node_modules/',
+        use: {
+          loader: 'babel-loader',
           options: {
-            config: {
-              path: "postcss.config.js"
-            }
+            presets: ['@babel/preset-env']
           }
-        }, {
-          loader: 'resolve-url-loader'
-        }, {
-          loader: "sass-loader",
         }
-      ]
-    }, {
-      test: /\.css$/i,
-      use: [MiniCssExtractPlugin.loader, "css-loader"]
-    }, {
-      test: /\.pug$/,
-      loader: "pug-loader"
-    }, {
-      test: /\.(png|gif|jpe?g)$/i,
-      use: [{
+      }, {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
+      }, {
+        test: /\.s[ac]ss$/,
+        use: [
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: 'postcss.config.js'
+              }
+            }
+          },
+          'resolve-url-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
+      },
+      {
+        test: /\.(jpg|png|gif|)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: 'img/[name].[ext]'
+          },
+        }],
+      },
+      {
+        test: /\.(woff|ttf|svg|eot)$/,
+        use: [{
           loader: 'file-loader',
           options: {
             name: '[path][name].[ext]',
-            outputPath: './img/',
-            // publicPath: 'src/img/',
           },
-        },
-        'img-loader',
-      ],
-    }, {
-      test: /\.(woff|ttf|svg|eot)$/,
-      use: [{
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-        },
-      }]
-    }, {
-      test: /\.svg$/,
-      loader: 'svg-url-loader',
-    }],
+        }]
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
+      }
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css"
+      filename: '[name].css'
     }),
-    // new CopyPlugin([{ //настроить пути, 
-    //   from: 'img/*',
-    //   to: './src/img'
-    // }], {
-    //   ignore: [{
-    //     glob: 'svg/*'
-    //   }, ]
-    // }),
+    // new CopyWebpackPlugin([
+    //-для favicon
+    //   { 
+    //   from: path.resolve(__dirname, './favicon.ico'),
+    //   to: path.resolve(__dirname, 'dist')
+    //   }
+    // ]),
     new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "src/index.pug"
-    }),
-    new HtmlWebpackPlugin({
-      filename: "pages/colors_type.html",
-      template: "src/pages/colors_type/colors_type.pug"
+      filename: 'index.html',
+      template: './index.pug'
     }),
     new HtmlWebpackPlugin({
-      filename: "pages/form_elements.html",
-      template: "src/pages/form_elements/form_elements.pug"
+      filename: 'pages/colors_type.html',
+      template: './pages/colors_type/colors_type.pug'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'pages/form_elements.html',
+      template: './pages/form_elements/form_elements.pug'
+    }),
+    new CleanWebpackPlugin(),
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
-    }, )
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    })
   ]
 };

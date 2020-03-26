@@ -13,3 +13,4 @@ require('../../components/comments/comments.js');
 require('../../components/date_dropdown/date_dropdown.js');
 require('../../components/filter_date/filter_date.js');
 require('../../components/expandable_list/expandable_list.js');
+require('../../components/selection_room/selection_room.js');

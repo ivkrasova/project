@@ -1,0 +1,17 @@
+@import "src/_variables";
+
+.account_registration {
+  @include card;
+  height: 46.14rem;
+
+  &_title {
+    @include title
+  }
+
+  &_login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $color-dark100;
+  }
+}

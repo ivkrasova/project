@@ -40,6 +40,10 @@
       width: 10.7rem; //150px
     }
 
+    &::placeholder {
+      color: $color-dark25;
+    }
+
     &:hover,
     &:focus {
       border: 1px solid $color-dark50;

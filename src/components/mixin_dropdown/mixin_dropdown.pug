@@ -2,26 +2,27 @@
 include ../../components/buttons/buttons.pug
 
 mixin dropdown(options)
-  .iqdropdown.iqdropdown_field(class='iqdropdown_field-'+options.size class="iqdropdown_"+options.local)
-      p.iqdropdown-selection(data-seletion-text="item" data-text-plural="items")
-      .iqdropdown-menu
-        .iqdropdown-menu-option(data-id='item1' data-defaultcount="0" data-mincount="0" data-maxcount="5")
-          div
-            p.iqdropdown-item=options.item1
-            p.iqdropdown-description=options.desc1
-        .iqdropdown-menu-option(data-id='item2' data-defaultcount="0" data-mincount="0" data-maxcount="5")
-          div
-            p.iqdropdown-item=options.item2
-            p.iqdropdown-description=options.desc2
-        .iqdropdown-menu-option(data-id='item3' data-defaultcount="0" data-mincount="0" data-maxcount="5") 
-          div
-            p.iqdropdown-item=options.item3
-            p.iqdropdown-description=options.desc3
-        - var buttons = false 
-        .iqdropdown-menu-buttons
-          if buttons=options.buttons
-            button.iqdropdown-menu-clear=options.clear
-            button.iqdropdown-menu-close=options.close
-          
+  .iqdropdown_label=options.label
+    .iqdropdown.iqdropdown_field(class='iqdropdown_field-'+options.size class="iqdropdown_"+options.local)
+        p.iqdropdown-selection(data-seletion-text="item" data-text-plural="items")
+        .iqdropdown-menu
+          .iqdropdown-menu-option(data-id='item1' data-defaultcount="0" data-mincount="0" data-maxcount="5")
+            div
+              p.iqdropdown-item=options.item1
+              p.iqdropdown-description=options.desc1
+          .iqdropdown-menu-option(data-id='item2' data-defaultcount="0" data-mincount="0" data-maxcount="5")
+            div
+              p.iqdropdown-item=options.item2
+              p.iqdropdown-description=options.desc2
+          .iqdropdown-menu-option(data-id='item3' data-defaultcount="0" data-mincount="0" data-maxcount="5") 
+            div
+              p.iqdropdown-item=options.item3
+              p.iqdropdown-description=options.desc3
+          - var buttons = false 
+          .iqdropdown-menu-buttons
+            if buttons=options.buttons
+              button.iqdropdown-menu-clear=options.clear
+              button.iqdropdown-menu-close=options.close
+            
 
 //- +dropdown({ label: "Dropdown", local: "guests", value: "Сколько гостей", item1: "Взрослые", item2: "Дети", item3: "Младенцы", buttons: true, clear: "Очистить", close: "Применить"  })

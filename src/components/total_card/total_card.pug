@@ -1,0 +1,17 @@
+include ../../components/date_dropdown/date_dropdown.pug
+include ../../components/mixin_dropdown/mixin_dropdown.pug
+include ../../components/buttons/buttons.pug
+
+.total_card
+  .total_card_info тут добавить блок с №/люкс/цена в сутки...
+    .total_card_info_number
+    .total_card_info_price
+  +date_dropdown({label1:"прибытие", label2:"выезд", size: 'small'})
+  +dropdown({label: "Гости", local: "guests", value: "Сколько гостей", item1: "Взрослые", item2: "Дети", item3: "Младенцы", buttons: true, clear: "Очистить", close: "Применить"})
+  .total_card_info_details 
+    span.
+    span
+    span
+    span
+  +button({name: 'Забронировать', background: 'full', size: 'large'})
+//- .total_card_info_details grid?

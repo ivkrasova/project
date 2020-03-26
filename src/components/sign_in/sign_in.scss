@@ -1,0 +1,11 @@
+@import "src/_variables";
+
+.sign_in {
+  @include card;
+  height: 25.57rem;
+
+  &_title {
+    @include title
+  }
+
+}

@@ -23,9 +23,12 @@ body {
 
 //заголовки(Quicksand-Bold, black, 24px)
 @mixin title {
+  margin: 0;
+  padding-bottom: 0.3rem;
   font-family: 'Conv_Quicksand-Bold', 'OpenSans-Bold', sans-serif;
   font-size: 24px;
   color: $color-dark100;
+  line-height: 30px;
 }
 
 //подпись к полям
@@ -42,12 +45,12 @@ body {
   display: flex;
   width: 22.8rem;
   height: 3.2rem;
-  // margin-top: 0.3rem;
+  margin-top: 0.3rem;
   background-color: #fff;
   border: 1px solid $color-dark25;
   box-sizing: border-box;
-  border-radius: 4px;
-  color: $color-dark25;
+  border-radius: 0.29rem;
+  color: $color-dark75;
   font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
   font-size: 1rem;
   padding-left: 1rem;
@@ -95,4 +98,17 @@ body {
   background: $primary-gradient;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@mixin card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 27.14rem;
+  padding: 2.75rem 2.1rem 2.1rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.26rem;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
 }
