@@ -1,0 +1,13 @@
+include ../../components/logo/logo.pug
+include ../../components/menu/menu.pug
+include ../../components/buttons/buttons.pug
+
+.header_standart
+  +logo()
+  .header_standart_content
+    .header_standart_menu_toggle Menu
+    .header_standart_menu
+      +menu({items:["Home", "About Us", "Services", "Careers","News", "Documentation"], drop:"2"})
+    +button({name: 'login', background: 'light', size: "small"})
+    .header_standart_button
+      +button({name: 'register', background: 'full', size: "middle"})

@@ -3,7 +3,7 @@
 .room_details {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
 
   &_number {
@@ -15,7 +15,7 @@
     :nth-child(2) {
       font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 1.57rem;
       color: $color-dark100;
     }
 

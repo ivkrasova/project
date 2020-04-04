@@ -1,0 +1,9 @@
+include ../../components/icons_social/icons_social.pug
+
+mixin footer_copyright(options)
+  .footer_copyright
+    .footer_copyright_content
+      .footer_copyright_content_text=options.text
+      +icons_social()
+
++footer_copyright({text: "Copyright © 2018 Toxin UI Kit. All rights reserved"})

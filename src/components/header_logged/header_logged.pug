@@ -1,0 +1,12 @@
+include ../../components/logo/logo.pug
+include ../../components/menu/menu.pug
+include ../../components/logged_user/logged_user.pug
+
+.header_logged
+  +logo()
+  .header_logged_content
+    .header_logged_menu
+      +menu({items:["Home", "About Us", "Services", "Careers","News", "Documentation"], drop:"2"})
+    .header_logged_user
+      +logged_user({name: "Cosmin Negoita"})
+    

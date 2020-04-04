@@ -1,0 +1,10 @@
+@import "src/_variables";
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &_text {
+    margin-left: 0.89rem;
+  }
+}

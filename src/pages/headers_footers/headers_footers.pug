@@ -1,0 +1,17 @@
+extends ../layout/base.pug
+
+block variables
+  -var title = "Headers & Footers"
+
+block content
+  .headers_footers
+    .headers_footers_logo
+      include ../../components/logo_default/logo_default.pug 
+      +logo_default()
+    .headers_footers_elements
+      include ../../components/header_standart/header_standart.pug
+      include ../../components/header_logged/header_logged.pug
+      .headers_footers_wrapper
+        include ../../components/footer_widgets/footer_widgets.pug
+        include ../../components/footer_copyright/footer_copyright.pug
+      include ../../components/footer_creative/footer_creative.pug

@@ -1,0 +1,33 @@
+@import "src/_variables";
+@import "../../components/logo/logo";
+@import "../../components/icons_social/icons_social";
+
+.footer_creative {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  height: 26.21rem;
+  align-items: center;
+  padding-bottom: 0.7rem;
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 45%;
+    margin: 0 auto;
+
+    &_text {
+      line-height: 1.71rem;
+      text-align: center;
+      padding-bottom: 0.5rem;
+    }
+
+    &_icons {
+      padding-right: 1.3rem;
+    }
+
+  }
+}

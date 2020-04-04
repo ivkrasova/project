@@ -1,39 +1,36 @@
 @import "../../_variables";
-@import "../../components/text_field/text_field";
-@import "../../components/drop_guests/drop_guests";
-@import "../../components/drop_comfort/drop_comfort";
-@import "../../components/masked_text_field/masked_text_field";
-@import "../../components/checkbox_buttons/checkbox_buttons";
-@import "../../components/radio_buttons/radio_buttons";
-@import "../../components/room_info/room_info";
-@import "../../components/mixin_dropdown/mixin_dropdown";
-@import "../../components/subscription_field/subscription_field";
-@import "../../components/toggle/toggle";
-@import "../../components/like_button/like_button";
-@import "../../components/rate_button/rate_button";
-@import "../../components/buttons/buttons";
-@import "../../components/pagination/pagination";
-@import "../../components/range_slider/range_slider";
-@import "../../components/bullet_list/bullet_list";
-@import "../../components/comments/comments";
-@import "../../components/date_dropdown/date_dropdown";
-@import "../../components/filter_date/filter_date";
-@import "../../components/expandable_list/expandable_list";
-@import "../../components/find_number/find_number";
-@import "../../components/account_registration/account_registration";
-@import "../../components/total_card/total_card";
-@import "../../components/sign_in/sign_in";
-@import "../../components/room_details/room_details";
-@import "../../components/selection_room/selection_room";
+// @import "../../components/text_field/text_field";
+// @import "../../components/drop_guests/drop_guests";
+// @import "../../components/drop_comfort/drop_comfort";
+// @import "../../components/masked_text_field/masked_text_field";
+// @import "../../components/checkbox_buttons/checkbox_buttons";
+// @import "../../components/radio_buttons/radio_buttons";
+// @import "../../components/room_info/room_info";
+// @import "../../components/mixin_dropdown/mixin_dropdown";
+// @import "../../components/subscription_field/subscription_field";
+// @import "../../components/toggle/toggle";
+// @import "../../components/like_button/like_button";
+// @import "../../components/rate_button/rate_button";
+// @import "../../components/buttons/buttons";
+// @import "../../components/pagination/pagination";
+// @import "../../components/range_slider/range_slider";
+// @import "../../components/bullet_list/bullet_list";
+// @import "../../components/comments/comments";
+// @import "../../components/date_dropdown/date_dropdown";
+// @import "../../components/filter_date/filter_date";
+// @import "../../components/expandable_list/expandable_list";
+// @import "../../components/logo/logo";
+// @import "../../components/menu/menu";
 
 
-.logo {
+.logo_wrapper {
   margin-top: 30px;
   margin-left: 30px;
 }
 
 .group_elements {
-  width: 1159px;
+  width: 1440px;
+  // width: 1159px;
   margin-left: 140px;
   margin-top: 63px;
   background-color: rgb(203, 222, 233);

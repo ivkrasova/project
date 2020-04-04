@@ -21,21 +21,20 @@ body {
   color: $color-dark75;
 }
 
-//заголовки(Quicksand-Bold, black, 24px)
-@mixin title {
-  margin: 0;
-  padding-bottom: 0.3rem;
-  font-family: 'Conv_Quicksand-Bold', 'OpenSans-Bold', sans-serif;
-  font-size: 24px;
-  color: $color-dark100;
-  line-height: 30px;
+//logo
+@mixin logo_default {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  margin-left: 2.14rem;
+  margin-top: 2.14rem;
 }
 
 //подпись к полям
 @mixin caption {
   font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.86rem;
+  line-height: 1.07rem;
   text-transform: uppercase;
   color: $color-dark100;
 }
@@ -47,7 +46,7 @@ body {
   height: 3.2rem;
   margin-top: 0.3rem;
   background-color: #fff;
-  border: 1px solid $color-dark25;
+  border: 0.07rem solid $color-dark25;
   box-sizing: border-box;
   border-radius: 0.29rem;
   color: $color-dark75;
@@ -66,7 +65,7 @@ body {
 
   &:hover,
   &:focus {
-    border: 1px solid $color-dark50;
+    border: 0.07rem solid $color-dark50;
     color: $color-dark75;
   }
 }
@@ -80,15 +79,15 @@ body {
 
 //состояния default, hover, focus
 @mixin state {
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.86rem;
+  line-height: 1.07rem;
   text-transform: uppercase;
   color: $color-dark50;
 }
 
 @mixin material-icons {
   font-family: 'Material Icons';
-  font-size: 24px;
+  font-size: 1.71rem;
   font-style: normal;
   font-weight: normal;
 }
@@ -100,15 +99,20 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+//заголовки(Quicksand-Bold, black, 24px)
+@mixin title {
+  font-family: 'Conv_Quicksand-Bold', 'OpenSans-Bold', sans-serif;
+  font-size: 1.71rem;
+  color: $color-dark100;
+}
+
 @mixin card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 27.14rem;
-  padding: 2.75rem 2.1rem 2.1rem;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  max-width: 27.14rem;
+  border: 0.07rem solid rgba(0, 0, 0, 0.12);
   border-radius: 0.26rem;
   box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 0rem 1.76rem rgba(0, 0, 0, 0.2);
   background: #ffffff;
 }

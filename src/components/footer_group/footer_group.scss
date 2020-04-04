@@ -1,0 +1,21 @@
+@import "src/_variables";
+
+.footer_group {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1.5rem;
+
+  :first-child {
+    @include caption
+  }
+
+  :active {
+    color: $color-dark75;
+  }
+
+  &_menu {
+    margin-bottom: 1.42rem;
+    text-decoration: none;
+    color: $color-dark50;
+  }
+}

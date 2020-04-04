@@ -3,12 +3,7 @@
 @import "./fonts";
 @import "./mixin_scss/mixin_colors";
 @import "./_variables";
-@import "./pages/form_elements/form_elements"
-
-// @import "./components/dark_100/dark_100.scss";
-// @import "./components/dark_75/dark_75.scss";
-// @import "./components/dark_50/dark_50.scss";
-// @import "./components/dark_25/dark_25.scss";
-// @import "./components/dark_5/dark_5.scss";
-// @import "./components/purple/purple.scss";
-// @import "./components/green/green.scss";
+@import "./components/logo_default/logo_default";
+// @import "./pages/form_elements/form_elements";
+@import "./pages/cards/cards";
+@import "./pages/headers_footers/headers_footers";

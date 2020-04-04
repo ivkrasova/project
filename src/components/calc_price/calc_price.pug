@@ -1,0 +1,17 @@
+mixin calc_price(options)
+  .calc_price
+    span.calc_price_item #{options.price}₽ x #{options.day} суток 
+    span.calc_price_item
+    span.calc_price_sum 39 960₽
+    span.calc_price_item Сбор за услуги: скидка 2 179₽
+    span.calc_price_item-info
+    span.calc_price_sum 0₽
+    span.calc_price_item Сбор за дополнительные услуги
+    span.calc_price_item-info 
+    span.calc_price_sum 300₽
+  .calc_total
+    span Итого 
+    span.calc_total_hr
+    span 38 081₽
+
+//- +calc_price({price: "9 990", day:"4"})

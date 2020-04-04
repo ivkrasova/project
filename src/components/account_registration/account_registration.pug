@@ -4,15 +4,18 @@ include ../../components/toggle/toggle.pug
 include ../../components/buttons/buttons.pug
 
 .account_registration
-  h1.account_registration_title Регистрация аккаунта
-  +text_field({type: "text", name:"text", value:"Имя"})
-  +text_field({type: "text", name:"text", value:"Фамилия"})
-  +radio_buttons({name:"gender", one:"Мужчина", two:"Женщина"})
-  +text_field({label: "Дата рождения", type: "text", name: "text", value:"ДД.ММ.ГГГГ", mask: "mask"})
-  +text_field({label: "Данные для входа в сервис", type: "Email", name: "Email", value:"Email"})
-  +text_field({type: "password", name: "password", placeholder: "Пароль"})
-  +toggle({text:"Получать спецпредложения"})
-  +button({name: 'перейти к оплате', background: 'full', size: 'large'})
-  .account_registration_login 
-    p Уже есть аккаунт на Toxin
-    +button({name: 'Войти', background: 'light'})
+  form.account_registration_form
+    span.account_registration_title Регистрация аккаунта
+    .account_registration_field
+      +text_field({type: "text", name:"text", value:"Имя"})
+      +text_field({type: "text", name:"text", value:"Фамилия"})
+      +radio_buttons({name:"gender", one:"Мужчина", two:"Женщина"})
+    +text_field({label: "Дата рождения", type: "text", name: "text", value:"ДД.ММ.ГГГГ", mask: "mask"})
+    .account_registration_data
+      +text_field({label: "Данные для входа в сервис", type: "Email", name: "Email", value:"Email"})
+      +text_field({type: "password", name: "password", placeholder: "Пароль"})
+      +toggle({text:"Получать спецпредложения"})
+    +button({name: 'перейти к оплате', background: 'full', size: 'large'})
+    .account_registration_login 
+      p Уже есть аккаунт на Toxin
+      +button({name: 'Войти', background: 'light'})

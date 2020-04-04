@@ -1,6 +1,6 @@
 mixin logo()
-  svg(width="48" height="48")
-    circle(r="22" cx="24" cy="24" fill="none" stroke="rgba(31, 32, 65, 0.25)" stroke-width="3")
-    circle(r="20" cx="39" cy="39" fill="none" stroke="rgba(31, 32, 65, 0.25)" stroke-width="3" stroke-linecap="round" stroke-dashoffset="14" stroke-dasharray="10 85")
-    circle(r="14" cx="10" cy="33" fill="none" stroke="rgba(31, 32, 65, 0.25)" stroke-width="3" stroke-linecap="round" stroke-dashoffset="19" stroke-dasharray="17 71")
-    circle(r="14" cx="13" cy="31" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-dashoffset="19" stroke-dasharray="17 71")
+  .logo
+    img.logo_pict(src='./img/logo_pict.svg', alt="logo_pict")
+    img.logo_text(src='./img/logo_text.svg', alt="logo_text")
+
+//- +logo()

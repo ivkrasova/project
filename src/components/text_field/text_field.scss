@@ -1,53 +1,54 @@
 @import "src/_variables";
 
-@mixin text_field {
+// @mixin text_field {
 
-  .text_field__title {
-    display: flex;
-    max-width: 22.8rem;
-    flex-direction: row;
-    justify-content: space-between;
+.text_field__title {
+  display: flex;
+  max-width: 22.8rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text_field__label {
+  @include caption
+}
+
+.text_field__state {
+  @include state;
+}
+
+.text_field__input {
+  display: flex;
+  width: 22.8rem; //-320px
+  height: 3.2rem; //-44px
+  margin-top: 0.3rem; //-5px
+  background-color: #fff;
+  border: 1px solid $color-dark25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: $color-dark25;
+  font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
+  font-size: 1rem;
+  padding-left: 1rem; //-15px
+  position: relative;
+
+  &-medium {
+    width: 19rem; //-266px
   }
 
-  .text_field__label {
-    @include caption
+  &-small {
+    width: 10.7rem; //150px
   }
 
-  .text_field__state {
-    @include state;
-  }
-
-  .text_field__input {
-    display: flex;
-    width: 22.8rem; //-320px
-    height: 3.2rem; //-44px
-    margin-top: 0.3rem; //-5px
-    background-color: #fff;
-    border: 1px solid $color-dark25;
-    box-sizing: border-box;
-    border-radius: 4px;
+  &::placeholder {
     color: $color-dark25;
-    font-family: 'Conv_Montserrat-Regular', 'OpenSans', sans-serif;
-    font-size: 1rem;
-    padding-left: 1rem; //-15px
-    position: relative;
+  }
 
-    &-medium {
-      width: 19rem; //-266px
-    }
-
-    &-small {
-      width: 10.7rem; //150px
-    }
-
-    &::placeholder {
-      color: $color-dark25;
-    }
-
-    &:hover,
-    &:focus {
-      border: 1px solid $color-dark50;
-      color: $color-dark75;
-    }
+  &:hover,
+  &:focus {
+    border: 1px solid $color-dark50;
+    color: $color-dark75;
   }
 }
+
+// }

@@ -1,0 +1,44 @@
+@import "src/_variables";
+
+.calc_price {
+  display: grid;
+  grid-template: repeat(3, 3fr)/3.5fr 0.5fr 1fr;
+  margin-top: 0.5rem;
+
+
+  &_item {
+    &-info:after {
+      position: absolute;
+      content: "i";
+      color: $color-dark25;
+      font-weight: bold;
+      text-align: center;
+      width: 1.43rem;
+      height: 1.43rem;
+      border-radius: 1.43rem;
+      border: 1px solid $color-dark25;
+
+    }
+  }
+
+  &_sum {
+    justify-self: end;
+  }
+}
+
+.calc_total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: $color-dark100;
+  font-size: 19px;
+  font-family: 'Conv_Quicksand-Bold', 'OpenSans-Bold', sans-serif;
+  margin-top: 1rem;
+
+  &_hr {
+    border: 0.5px dashed $color-dark25;
+    width: 55%;
+    margin-bottom: 0.4rem;
+  }
+}

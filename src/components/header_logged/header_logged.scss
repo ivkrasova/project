@@ -1,0 +1,24 @@
+@import "src/_variables";
+@import "../../components/logo/logo";
+@import "../../components/menu/menu";
+@import "../../components/logged_user/logged_user";
+
+.header_logged {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  max-width: 100%;
+  max-height: 5rem;
+  padding: 1% 9.7%;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+  &_content {
+    display: flex;
+    align-items: center;
+  }
+
+  &_menu {
+    margin-right: 2.14rem;
+  }
+}

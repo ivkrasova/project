@@ -35,8 +35,10 @@
       position: absolute;
       left: 2px;
       top: 2px;
-      width: 6.8rem;
-      height: 2.8rem;
+      // width: 6.8rem;
+      // height: 2.8rem;
+      width: 95.77%;
+      height: 90.32%;
       background: #ffffff;
       border-radius: 1.6rem;
       z-index: -1;
@@ -76,5 +78,14 @@
       left: 90%;
       top: 35%;
     }
+  }
+
+  &-small {
+    width: 5.64rem;
+    height: 2.43rem;
+  }
+
+  &-middle {
+    height: 2.43rem;
   }
 }

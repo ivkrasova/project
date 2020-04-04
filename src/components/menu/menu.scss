@@ -1,0 +1,31 @@
+@import "src/_variables";
+
+.menu_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  :active {
+    font-weight: bold;
+    color: $color-dark75;
+  }
+}
+
+.menu_item {
+  margin-left: 2.1rem;
+  text-decoration: none;
+  color: $color-dark50;
+
+  &-drop {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '\e5cf';
+      @include material-icons;
+      color: $color-dark50;
+      align-items: center;
+      line-height: 1.43rem;
+    }
+  }
+
+}

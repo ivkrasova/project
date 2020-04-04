@@ -1,0 +1,16 @@
+mixin menu(options)
+  .menu_wrapper
+    for item in options.items
+      a.menu_item(href="/mock-address/change-me")=item
+    //- if(options.drop)
+    //-   a(href="#" class="menu_item-drop")=item
+              //- select
+              //-   option 123
+              //-   option 456 
+
+- var items = []
+
+//- +menu({items:["Home", "About Us", "Services", "Careers","News", "Documentation"], drop:"2"})
+
+//-определенный элемент массива становится выпадающим списком
+

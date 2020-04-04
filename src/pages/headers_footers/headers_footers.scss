@@ -1,0 +1,26 @@
+@import "../../_variables";
+@import "../../components/header_standart/header_standart";
+@import "../../components/header_logged/header_logged";
+@import "../../components/footer_widgets/footer_widgets";
+@import "../../components/footer_copyright/footer_copyright";
+@import "../../components/footer_creative/footer_creative";
+
+.headers_footers {
+  background-color: #f4f4f6;
+
+  &_logo {
+    @include logo_default;
+  }
+
+  &_elements {
+    padding-top: 10.9rem;
+    padding-bottom: 9.28rem;
+    max-width: 1440px;
+    height: 1350px;
+    // width: 100vw;
+    background-color: #f4f4f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

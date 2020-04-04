@@ -1,0 +1,24 @@
+extends ../layout/base.pug
+
+block variables
+  -var title = "Cards"
+
+block content
+  .cards
+    .cards_logo
+      include ../../components/logo_default/logo_default.pug 
+      +logo_default()
+    .cards_elements
+      .cards_elements_item1
+        include ../../components/find_number/find_number.pug
+      .cards_elements_item2
+        include ../../components/total_card/total_card.pug
+      .cards_elements_item3(class="datepicker-here")
+      .cards_elements_item4
+        include ../../components/account_registration/account_registration.pug
+      .cards_elements_item5
+        include ../../components/sign_in/sign_in.pug
+      .cards_elements_item6
+        include ../../components/selection_room/selection_room.pug
+        +selection_room({photo1: "room888-1.jpg", photo2: "room888-2.jpg", number: "888", price:"9 900", luxe: "люкс", n: [5, 4, 3, 2, 1], rate: '0', reviews: "145"})
+        +selection_room({photo1: "room888-1.jpg", photo2: "room888-2.jpg", number: "840", price:"9 900", n: [5, 4, 3, 2, 1], rate: '1', reviews: "65"})

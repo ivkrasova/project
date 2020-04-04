@@ -1,4 +1,6 @@
 @import "src/_variables";
+@import "../../components/room_details/room_details";
+@import "../../components/rate_button/rate_button";
 
 .selection_room {
   @include card;
@@ -7,7 +9,7 @@
   width: 19.35rem;
   height: 18.4rem;
 
-  &_slider img {
+  &_slider_img {
     border-radius: 4px 4px 0 0;
   }
 
@@ -15,7 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 1.5rem;
+    margin: 1.2rem 1.5rem;
   }
 
   &_hr {
@@ -26,7 +28,6 @@
     box-shadow: none;
     margin: 0.7rem 0;
   }
-
 }
 
 .owl-carousel .owl-nav .owl-prev {
@@ -74,7 +75,7 @@
   box-sizing: border-box;
   box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
   display: block;
-  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
   transition: opacity 200ms ease;
   border-radius: 0.54rem;
 }

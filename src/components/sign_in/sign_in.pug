@@ -2,10 +2,12 @@ include ../../components/text_field/text_field.pug
 include ../../components/buttons/buttons.pug
 
 .sign_in
-  h1.sign_in_title Войти
-  +text_field({type: "Email", name:"Email", value:"Email"})
-  +text_field({type: "password", name: "password", placeholder: "Пароль"})
-  +button({name: 'Войти', background: 'full', size: 'large'})
-  .account_registration_login 
-    p Нет аккаунта на Toxin?
-    +button({name: 'Создать', background: 'light'})
+  form.sign_in_form
+    span.sign_in_title Войти
+    .sign_in_content
+      +text_field({type: "Email", name:"Email", value:"Email"})
+      +text_field({type: "password", name: "password", placeholder: "Пароль"})
+      +button({name: 'Войти', background: 'full', size: 'large'})
+    .sign_in_login
+      p Нет аккаунта на Toxin?
+      +button({name: 'Создать', background: 'light'})

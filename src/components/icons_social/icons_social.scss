@@ -1,0 +1,15 @@
+@import "src/_variables";
+
+.icons_social {
+  display: flex;
+  flex-direction: row;
+
+  &_tw,
+  &_fb,
+  &_inst {
+    width: 1.71rem;
+    height: 1.71rem;
+    cursor: pointer;
+    margin-left: 1.4rem;
+  }
+}

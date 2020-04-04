@@ -1,0 +1,8 @@
+mixin footer_group(options)
+  .footer_group
+    for item in options.items
+      a.footer_group_menu(href="/mock-address/change-me")=item
+
+-var items = []
+
+//- +footer_group({items: ["Navigation", "About Us", "News", "Support", "Products"]})

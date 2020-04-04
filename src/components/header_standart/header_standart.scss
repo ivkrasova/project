@@ -1,0 +1,56 @@
+@import "src/_variables";
+@import "../../components/logo/logo";
+@import "../../components/menu/menu";
+@import "../../components/buttons/buttons";
+
+.header_standart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  max-width: 100%;
+  max-height: 5rem;
+  padding: 1% 9.7%;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+  &_content {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &_menu {
+    margin-right: 2.14rem;
+  }
+
+  &_button {
+    margin-left: 1.43rem;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .logo .logo_text {
+      display: none;
+    }
+  }
+
+  .header_standart_menu_toggle {
+    display: none;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1015px) {
+    .header_standart_menu {
+      display: none;
+      position: absolute;
+    }
+
+    .menu_wrapper {
+      flex-wrap: wrap;
+    }
+
+    .header_standart_menu_toggle {
+      display: inline-block;
+    }
+
+  }
+}

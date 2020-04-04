@@ -1,0 +1,11 @@
+@import "src/_variables";
+
+
+.logged_user {
+  // width: 8.14rem;
+  max-height: 2.14rem;
+  color: $color_dark50;
+  padding-left: 2.14rem;
+  border-left: 1px solid rgba(31, 32, 65, 0.1);
+  line-height: 2.14rem;
+}

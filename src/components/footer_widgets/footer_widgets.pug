@@ -1,0 +1,17 @@
+include ../../components/logo/logo.pug
+include ../../components/footer_group/footer_group.pug
+include ../../components/subscription_field/subscription_field.pug
+
+
+.footer_widgest
+  .footer_widgest_logo
+    +logo()
+    .footer_widgest_logo_text 
+    | Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+  .footer_widgest_group
+    +footer_group({items: ["Navigation", "About Us", "News", "Support", "Products"]})
+    +footer_group({items: ["About Us", "Who we are ", "Our team", "Careers ", "Investors"]})
+    +footer_group({items: ["Support", "Documentation", "Community", "Get in Touch"]})
+    .footer_widgest_subscribe
+      +footer_group({items: ["Subscribe to our newsletter", "Receive our latest news and promotions in your inbox!"]})
+      +subscription_field({size: "medium", type:"Email", name: "Email", value: "Your email address"})

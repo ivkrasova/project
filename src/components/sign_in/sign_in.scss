@@ -1,11 +1,39 @@
 @import "src/_variables";
+@import "../../components/text_field/text_field";
+@import "../../components/buttons/buttons";
 
 .sign_in {
   @include card;
+  max-width: 27.14rem;
   height: 25.57rem;
+  justify-content: space-between;
+  padding: 2.75rem 2.14rem 2.14rem;
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
 
   &_title {
-    @include title
+    @include title;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 12rem;
+    margin-top: -1rem;
+  }
+
+  &_login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $color-dark100;
+
   }
 
 }

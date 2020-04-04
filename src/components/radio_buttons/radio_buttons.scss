@@ -3,7 +3,7 @@
 .radio_buttons {
   display: flex;
   flex-direction: row;
-  width: 222px;
+  // width: 222px;
 
   &__name {
     @include caption;

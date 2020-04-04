@@ -1,6 +1,20 @@
 @import "src/_variables";
+@import "../../components/room_details/room_details";
+@import "../../components/date_dropdown/date_dropdown";
+@import "../../components/drop_guests/drop_guests";
+@import "../../components/calc_price/calc_price";
+@import "../../components/buttons/buttons";
 
 .total_card {
   @include card;
+  justify-content: space-between;
   height: 36.5rem;
+  padding: 2.85rem 2.14rem 2.14rem;
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    height: 88.5%;
+    justify-content: space-between;
+  }
 }

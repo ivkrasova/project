@@ -1,8 +1,22 @@
 @import "src/_variables";
+@import "../../components/text_field/text_field";
+@import "../../components/radio_buttons/radio_buttons";
+@import "../../components/toggle/toggle";
+@import "../../components/buttons/buttons";
+
 
 .account_registration {
   @include card;
   height: 46.14rem;
+  justify-content: space-between;
+  padding: 2.5rem 2.1rem 2.14rem;
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
 
   &_title {
     @include title
@@ -13,5 +27,22 @@
     flex-direction: row;
     justify-content: space-between;
     color: $color-dark100;
+
   }
+
+  &_field {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 9.4rem;
+    margin-top: -0.7rem;
+  }
+
+  &_data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10.4rem;
+  }
+
 }
