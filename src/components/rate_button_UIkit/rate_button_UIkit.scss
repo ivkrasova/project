@@ -1,0 +1,16 @@
+@import "src/_variables";
+@import "../../components/rate_button/rate_button";
+
+.rate_button_UIkit {
+
+  &_title {
+    @include caption;
+    margin-bottom: 1.1rem;
+  }
+
+  &_content {
+    display: flex;
+    width: 18.57rem;
+    justify-content: space-between;
+  }
+}

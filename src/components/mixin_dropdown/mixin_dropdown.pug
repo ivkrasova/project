@@ -1,8 +1,8 @@
-//- include ../../components/text_field/text_field.pug
 include ../../components/buttons/buttons.pug
 
 mixin dropdown(options)
-  .iqdropdown_label=options.label
+  .iqdropdown_label(class="iqdropdown_label-"+options.size)=options.label
+    span.iqdropdown_label_state=options.state
     .iqdropdown.iqdropdown_field(class='iqdropdown_field-'+options.size class="iqdropdown_"+options.local)
         p.iqdropdown-selection(data-seletion-text="item" data-text-plural="items")
         .iqdropdown-menu
@@ -25,4 +25,4 @@ mixin dropdown(options)
               button.iqdropdown-menu-close=options.close
             
 
-//- +dropdown({ label: "Dropdown", local: "guests", value: "Сколько гостей", item1: "Взрослые", item2: "Дети", item3: "Младенцы", buttons: true, clear: "Очистить", close: "Применить"  })
+//- +dropdown({ label: "Dropdown", state: "", local: "guests", value: "Сколько гостей", item1: "Взрослые", item2: "Дети", item3: "Младенцы", buttons: true, clear: "Очистить", close: "Применить"  })

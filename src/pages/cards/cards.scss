@@ -13,14 +13,12 @@
   }
 
   &_elements {
-    position: relative;
     padding-top: 10.71rem;
     padding-left: 10rem;
     padding-right: 10rem;
     padding-bottom: 9.28rem;
     max-width: 1440px;
     max-height: 1350px;
-    // width: 100vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2.85rem;

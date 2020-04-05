@@ -1,5 +1,9 @@
 @import "src/_variables";
 
+.iqdropdown_label_state {
+  @include state;
+}
+
 html {
   box-sizing: border-box
 }
@@ -131,11 +135,21 @@ body {
 
 .iqdropdown_field {
   @include text_input;
-  position: relative;
+  // position: relative;
 }
 
 .iqdropdown_label {
   @include caption;
+  width: 22.9rem;
+
+  &-medium {
+    width: 19rem;
+  }
+
+  &-small {
+    width: 10.7rem;
+  }
+
 }
 
 .iqdropdown .iqdropdown-menu-option {
@@ -244,6 +258,5 @@ body {
   font-size: 1.8rem;
   content: '\e5cf';
   position: absolute;
-  left: 90%;
-  top: 35%;
+  right: 0.6rem;
 }

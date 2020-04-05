@@ -1,0 +1,7 @@
+include ../../components/rate_button/rate_button.pug
+
+.rate_button_UIkit
+  .rate_button_UIkit_title rate button
+  .rate_button_UIkit_content
+    +rating({n: [5, 4, 3, 2, 1], rate: '1'}) 
+    +rating({n: [5, 4, 3, 2, 1], rate: '0'})

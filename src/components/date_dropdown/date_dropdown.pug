@@ -1,7 +1,7 @@
 mixin date_dropdown(options)
   .date_dropdown
     label.date_dropdown_label(for="start")=options.label1
-      input.date_dropdown__input(type='text' id="start" class ='date_dropdown__input-'+options.size class ='date_dropdown__input_'+options.date class="datepicker-here" data-datepicker="datepicker")
+      input.date_dropdown__input(type='text' id="start" class ='date_dropdown__input-'+options.size class="datepicker-here" data-datepicker="datepicker")
     label.date_dropdown_label(for="end")=options.label2
       input.date_dropdown__input(type='text' id="end" class ='date_dropdown__input-'+options.size class ='date_dropdown__input_'+options.date)
       
@@ -9,4 +9,4 @@ mixin date_dropdown(options)
 //- +date_dropdown({size: 'small'}) 
 //- +date_dropdown({size: 'small', date:"date"})
 
-//- +date_dropdown({label1:"ok", label2:"ok", size: 'small'}) 
+//- +date_dropdown({label1:"ok", label2:"ok", size: 'small', date:"date"}) 

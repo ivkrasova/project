@@ -1,37 +1,132 @@
 @import "../../_variables";
-// @import "../../components/text_field/text_field";
-// @import "../../components/drop_guests/drop_guests";
-// @import "../../components/drop_comfort/drop_comfort";
-// @import "../../components/masked_text_field/masked_text_field";
-// @import "../../components/checkbox_buttons/checkbox_buttons";
-// @import "../../components/radio_buttons/radio_buttons";
-// @import "../../components/room_info/room_info";
-// @import "../../components/mixin_dropdown/mixin_dropdown";
-// @import "../../components/subscription_field/subscription_field";
-// @import "../../components/toggle/toggle";
-// @import "../../components/like_button/like_button";
-// @import "../../components/rate_button/rate_button";
-// @import "../../components/buttons/buttons";
-// @import "../../components/pagination/pagination";
-// @import "../../components/range_slider/range_slider";
-// @import "../../components/bullet_list/bullet_list";
-// @import "../../components/comments/comments";
-// @import "../../components/date_dropdown/date_dropdown";
-// @import "../../components/filter_date/filter_date";
-// @import "../../components/expandable_list/expandable_list";
-// @import "../../components/logo/logo";
-// @import "../../components/menu/menu";
+@import "../../components/text_field/text_field";
+@import "../../components/drop_guests/drop_guests";
+@import "../../components/masked_text_field/masked_text_field";
+@import "../../components/date_dropdown/date_dropdown";
+@import "../../components/filter_date/filter_date";
+@import "../../components/subscription_field/subscription_field";
+@import "../../components/drop_comfort/drop_comfort";
+@import "../../components/expandable_list/expandable_list";
+@import "../../components/room_info/room_info";
+@import "../../components/checkbox_buttons/checkbox_buttons";
+@import "../../components/radio_buttons/radio_buttons";
+@import "../../components/toggle/toggle";
+@import "../../components/like_button_UIkit/like_button_UIkit";
+@import "../../components/rate_button_UIkit/rate_button_UIkit";
+@import "../../components/comments/comments";
+@import "../../components/range_slider/range_slider";
+@import "../../components/buttons_UIkit/buttons_UIkit";
+@import "../../components/pagination/pagination";
+@import "../../components/bullet_list/bullet_list";
 
 
-.logo_wrapper {
-  margin-top: 30px;
-  margin-left: 30px;
+.form_elements {
+  background-color: #ffffff;
+
+
+  &_logo {
+    @include logo_default;
+  }
+
+  &_wrapper {
+    padding: 10.35rem 10rem;
+    max-width: 1440px;
+    height: 1853px;
+    display: grid;
+    grid-template-columns: 320px 126px 320px 72px 320px;
+    grid-template-rows: 639px 95px 265px 54px 341px 29px 135px;
+  }
+
+  &_group_1{
+    grid-row: 1;
+    grid-column: 1;
+
+      &_12 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 16.5rem;
+        margin-bottom: 1.6rem;
+      }
+      &_13 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 27rem;
+      }
+  }
+  &_group_2{
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 38.5rem;
+  }
+  &_group_3{
+    grid-row: 1;
+    grid-column: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 36.5rem;
+
+      &_31 {
+        height: 115px;
+      }
+
+      &_311 {
+        @include caption;
+        margin-bottom: 1.2rem;
+      }
+
+  }
+  &_group_4{
+    grid-row: 3;
+    grid-column: 1;
+    display: flex;
+    height: 10.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+  &_group_5{
+    grid-row: 3;
+    grid-column: 3;
+  }
+  &_group_6{
+    grid-row: 3;
+    grid-column: 5;
+  }
+  &_group_7{
+    grid-row: 5;
+    grid-column: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 23.8rem;
+  
+  }
+  &_group_8{
+    grid-row: 5;
+    grid-column: 3;
+  }
+  &_group_9{
+    grid-row: 5;
+    grid-column: 5;
+  }
+  &_group_10{
+    grid-row: 7;
+    grid-column: 1;
+  }
+  &_group_11{
+    grid-row: 7;
+    grid-column: 3;
+    margin-top: 0.5rem;
+  }
 }
 
-.group_elements {
-  width: 1440px;
-  // width: 1159px;
-  margin-left: 140px;
-  margin-top: 63px;
-  background-color: rgb(203, 222, 233);
-}
+
+
+

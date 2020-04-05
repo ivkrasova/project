@@ -35,8 +35,6 @@
       position: absolute;
       left: 2px;
       top: 2px;
-      // width: 6.8rem;
-      // height: 2.8rem;
       width: 95.77%;
       height: 90.32%;
       background: #ffffff;
@@ -54,7 +52,8 @@
   }
 
   &-simple {
-    height: auto;
+    height: 1rem;
+    text-align: start;
     background: none;
     color: $primary-color;
 

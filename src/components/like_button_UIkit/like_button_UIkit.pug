@@ -1,0 +1,9 @@
+include ../../components/like_button/like_button.pug
+
+.like_button_UIkit
+  .like_button_UIkit_title like button
+  .like_button_UIkit_content
+    +like_button({title: 'Like button', count: '2'})
+    +like_button({title: 'Like button', active: 'liked', count: '12'})
+
+    

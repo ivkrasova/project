@@ -1,0 +1,16 @@
+@import "src/_variables";
+@import "../../components/like_button/like_button";
+
+.like_button_UIkit {
+
+  &_title {
+    @include caption;
+    margin-bottom: 1.2rem
+  }
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    width: 6.36rem;
+  }
+}

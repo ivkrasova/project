@@ -2,8 +2,8 @@ include ../../components/checkbox_buttons/checkbox_buttons.pug
 
 mixin expandable_list(options)
   .expandable_list 
-    .expandable_list_label=options.label
-    .expandable_list_content
+    .expandable_list_label(class="expandable_list_label-" +options.checked)=options.label
+    .expandable_list_content(class="expandable_list_content-" +options.checked)
       +checkbox_buttons(options)
 
 //- +expandable_list({label: "expandable checkbox list", num: '8', choice: ["Завтрак ", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"]})

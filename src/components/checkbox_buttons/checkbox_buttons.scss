@@ -3,11 +3,11 @@
 .checkbox_buttons {
   display: flex;
   flex-direction: column;
-  width: 235px;
-  height: 100%;
+  max-width: 17.5rem;
 
   &__name {
     @include caption;
+    margin-bottom: 0.8rem;
   }
 
   &__input {
@@ -33,7 +33,7 @@
     position: relative;
     top: 5.5px;
     padding-left: 30px;
-    padding-bottom: 12px;
+    padding-bottom: 13px;
     cursor: pointer;
   }
 }
@@ -47,17 +47,13 @@
 
 .checkbox_buttons__label-caption {
   font-family: 'Conv_Montserrat-Bold', 'OpenSans-Bold', sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   color: $color-dark75;
 }
 
 .checkbox_buttons__details {
   display: block;
-  // width: 236px;
-  max-height: 2rem;
-  font-size: 12px;
+  font-size: 0.86rem;
   color: $color-dark50;
-  padding-left: 30px;
-  background-color: red;
-  // word-wrap: break-word;
+  padding-left: 2.14rem;
 }

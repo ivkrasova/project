@@ -4,58 +4,63 @@ block variables
   -var title = "Form Elements"
   
 block content
-  include ../../components/logo/logo_default.pug
-  .logo_wrapper
-    +logo_default()
-  .group_elements
-    //- include ../../components/date_dropdown/date_dropdown.pug
-    //- include ../../components/filter_date/filter_date.pug
-    //- include ../../components/drop_guests/drop_guests.pug
-    //- include ../../components/drop_comfort/drop_comfort.pug
-    //- include ../../components/comments/comments.pug
-    //- include ../../components/bullet_list/bullet_list.pug
-    //- include ../../components/range_slider/range_slider.pug
-    //- include ../../components/pagination/pagination.pug
-    //- include ../../components/text_field/text_field.pug
-    //- +text_field({label:"text field", state:"default", type: "Email", name:"Email", value:"Email"})
-
-    //- +text_field({label: "Text Field", state:"Hover / Focus", type: "text", name: "text", value: "This is pretty awesome"})
-
-    //- +text_field({label: "Masked text field", state:"default", type: "text", name: "text", value:"ДД.ММ.ГГГГ", mask: "mask"})
-
-    //- include ../../components/subscription_field/subscription_field.pug
-    //- +subscription_field({label: "subscription text field", size: "medium", type:"Email", name: "Email", value: "Email" })
-
-    //- include ../../components/toggle/toggle.pug
-    //- +toggle({title: "toggle", checked: "checked", text: "Получать спецпредложения"})
-    //- +toggle({text: "Получать спецпредложения"})
-
-    //- include ../../components/like_button/like_button.pug
-    //- +like_button({title: 'Like button', count: '2'})
-    //- +like_button({active: 'liked', count: '12'})
-
-    //- include ../../components/rate_button/rate_button.pug
-    //- +rating({n: [5, 4, 3, 2, 1], rate: '1'}) 
-    //- +rating({n: [5, 4, 3, 2, 1], rate: '0'}) 
-
-    //- include ../../components/checkbox_buttons/checkbox_buttons.pug
-    //- +checkbox_buttons({title: "Checkbox button", num: '3', choice: ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"]})
-    
-    //- +checkbox_buttons({title: "Rich checkbox buttons", num: '2', choice: ["Широкий коридор ","Помощник для инвалидов"], style: "caption", lehgth: '1', details: ["Ширина коридоров в номере не менее 91 см.", "На 1 этаже вас встретит специалист и проводит до номера."]})
-
-    //- include ../../components/radio_buttons/radio_buttons.pug
-    //- include ../../components/room_info/room_info.pug
-    //- +room_info("insert_emoticon","Комфорт","Шумопоглощающие стены")
-    //- +room_info("location_city","Удобство","Окно в каждой из спален")
-
-    //- include ../../components/buttons/buttons.pug  
-    //- +button({name: 'click me', background: 'full'})
-    //- +button({name: 'click me', background: 'full', disabled: '-disabled'})
-    //- +button({name: 'click me', background: 'light'})
-    //- +button({name: 'click me', background: 'light', disabled: '-disabled'})
-    //- +button({name: 'click me', background: 'simple'})
-    //- +button({name: 'click me', background: 'simple', disabled: '-disabled'})
-    //- +button({name: 'перейти к оплате', background: 'full', size: 'large'})
-
-    //- include ../../components/expandable_list/expandable_list.pug
-    //- +expandable_list({label: "expandable checkbox list", num: '8', choice: ["Завтрак ", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"]})
+  .form_elements
+    .form_elements_logo
+      include ../../components/logo_default/logo_default.pug
+      +logo_default()
+    .form_elements_wrapper 
+      .form_elements_group_1
+        .form_elements_group_1_12
+          include ../../components/text_field/text_field.pug
+          +text_field({label: "text field", state:"default", type: "Email", name:"Email", placeholder: "Email"})
+          +text_field({label: "text field", state:"Hover / Focus", type: "text", name: "text", value: "This is pretty awesome"})
+          include ../../components/drop_guests/drop_guests.pug
+          +dropdown({label: "Dropdown", state:"default", local: "guests", value: "Сколько гостей", item1: "Взрослые", item2: "Дети", item3: "Младенцы", buttons: true, clear: "Очистить", close: "Применить" })
+        .form_elements_group_1_13
+          +text_field({label: "Masked text field", state:"default", type: "text", name: "text", value:"ДД.ММ.ГГГГ", mask: "mask"})
+          include ../../components/date_dropdown/date_dropdown.pug
+          +date_dropdown({label1:"date dropdown", label2:"date dropdown", size: 'small', date:"date"}) 
+          include ../../components/filter_date/filter_date.pug
+          +filter_date({title: "filter date dropdown", size: "medium"})
+          include ../../components/subscription_field/subscription_field.pug
+          +subscription_field({label: "subscription text field", size: "medium", type:"Email", name: "Email", placeholder: "Email" })
+      .form_elements_group_2  
+        include ../../components/checkbox_buttons/checkbox_buttons.pug
+        +checkbox_buttons({title: "Checkbox buttons", num: '3', choice: ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"]})
+        include ../../components/radio_buttons/radio_buttons.pug
+        +radio_buttons({title:"radio buttons", name:"gender", one:"Мужчина", two:"Женщина"})
+        .form_elements_group_2_21
+          include ../../components/toggle/toggle.pug
+          +toggle({title: "toggle", checked: "checked", text: "Получать спецпредложения"})
+          +toggle({text: "Получать спецпредложения"})
+        include ../../components/like_button_UIkit/like_button_UIkit.pug
+        include ../../components/rate_button_UIkit/rate_button_UIkit.pug
+      .form_elements_group_3
+        include ../../components/range_slider/range_slider.pug
+        include ../../components/buttons_UIkit/buttons_UIkit.pug 
+        .form_elements_group_3_31 
+          .form_elements_group_3_311 pagination
+          include ../../components/pagination/pagination.pug
+      .form_elements_group_4
+        include ../../components/drop_comfort/drop_comfort.pug
+        +dropdown({size:"medium", label: "Dropdown", state:"default", local: "comfort", value: "Удобство номера", item1: "Спальни", item2: "Кровати", item3:"Ванные комнаты"})
+        +dropdown({size:"medium", label: "Dropdown", state:"expanded", local: "comfort", value: "Удобство номера", item1: "Спальни", item2: "Кровати", item3:"Ванные комнаты"})
+      .form_elements_group_5
+        +dropdown({label: "Dropdown", local: "guests", value: "Сколько гостей", item1: "Взрослые", item2: "Дети", item3: "Младенцы", buttons: true, clear: "Очистить", close: "Применить" })
+      .form_elements_group_6
+         +dropdown({label: "Dropdown", local: "guests", value: "Сколько гостей", item1: "Взрослые", item2: "Дети", item3: "Младенцы", buttons: true, clear: "Очистить", close: "Применить" })
+      .form_elements_group_7
+        include ../../components/expandable_list/expandable_list.pug
+        +expandable_list({label: "expandable checkbox list", num: '8', choice: ["Завтрак ", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"]})
+        +expandable_list({label: "expandable checkbox list", checked: "active", num: '8', choice: ["Завтрак ", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"]})
+      .form_elements_group_8
+        +checkbox_buttons({title: "Rich checkbox buttons", num: '2', choice: ["Широкий коридор ","Помощник для инвалидов"], style: "caption", lehgth: '1', details: ["Ширина коридоров в номере не менее 91 см.", "На 1 этаже вас встретит специалист и проводит до номера."]})
+      .form_elements_group_9
+        include ../../components/bullet_list/bullet_list.pug
+      .form_elements_group_10
+        include ../../components/room_info/room_info.pug
+        +room_info("insert_emoticon","Комфорт","Шумопоглощающие стены")
+        +room_info("location_city","Удобство","Окно в каждой из спален")
+      .form_elements_group_11
+        include ../../components/comments/comments.pug
+        +comments({photo: "avatar.png", name:"Мурад Сарафанов", date:"5 дней назад", text:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})

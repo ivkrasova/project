@@ -1,12 +1,10 @@
-//- include ../../components/text_field/text_field.pug
-
 mixin text_field(options)
   .text_field
     .text_field__title
       label.text_field__label=options.label
+        span.text_field__state=options.state
         input(class="text_field__input text_field__input-"+options.mask type=options.type name=options.name value=options.value, placeholder=options.placeholder)
 
-//- +text_field({label:"ok", type: "text", name:"text", value:""})
+//- +text_field({label:"ok", type: "text", name:"text", value:"", placeholder:""})
 
 //- span.text_field__state=options.state
-//- input(class="text_field__input text_field__input-"+options.mask type=options.type name=options.name value=options.value)

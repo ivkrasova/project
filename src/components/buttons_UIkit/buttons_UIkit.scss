@@ -1,0 +1,32 @@
+@import "src/_variables";
+@import "../../components/buttons/buttons";
+
+.buttons_UIkit {
+  height: 19.64rem;
+
+  &_title {
+    @include caption;
+    margin-bottom: 1.1rem;
+  }
+
+  &_content {
+    width: 23.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_wrapper {
+      display: flex;
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  &_content_small {
+    width: 15.71rem;
+    height: 10.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+}

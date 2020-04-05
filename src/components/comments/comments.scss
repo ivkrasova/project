@@ -1,8 +1,10 @@
 @import "src/_variables";
+@import "../../components/like_button/like_button";
 
 .comments {
   width: 50.9rem;
   box-sizing: border-box;
+
 
   &_user {
     display: flex;
@@ -12,7 +14,6 @@
     &_photo {
       max-width: 48px;
       max-height: 48px;
-      // background: url(/img/comments.png) center center;
     }
 
     &_guest {

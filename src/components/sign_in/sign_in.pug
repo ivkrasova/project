@@ -5,7 +5,7 @@ include ../../components/buttons/buttons.pug
   form.sign_in_form
     span.sign_in_title Войти
     .sign_in_content
-      +text_field({type: "Email", name:"Email", value:"Email"})
+      +text_field({type: "Email", name:"Email", placeholder:"Email"})
       +text_field({type: "password", name: "password", placeholder: "Пароль"})
       +button({name: 'Войти', background: 'full', size: 'large'})
     .sign_in_login

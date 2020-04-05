@@ -1,6 +1,6 @@
 mixin checkbox_buttons(options)
   .checkbox_buttons
-    p(class="checkbox_buttons__name")=options.title
+    span(class="checkbox_buttons__name")=options.title
     - for(let i = 0; i < options.num; i++)
       label(class="checkbox_buttons__label checkbox_buttons__label-"+options.style)
         input(class="checkbox_buttons__input" type="checkbox")

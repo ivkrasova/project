@@ -1,10 +1,9 @@
 mixin button(options)
-  .form
-    .button
-      button.button_standart(alt="click me" 
-      class="button_standart-"+options.background
-      class="button_standart-"+options.background +options.disabled 
-      class="button_standart-"+options.size)= options.name
+  .button
+    button.button_standart(alt="click me" 
+    class="button_standart-"+options.background
+    class="button_standart-"+options.background +options.disabled 
+    class="button_standart-"+options.size)= options.name
 
 //- +button({name: 'click me', background: 'full'})
 //- +button({name: 'click me', background: 'full', disabled: '-disabled'})
@@ -13,3 +12,4 @@ mixin button(options)
 //- +button({name: 'click me', background: 'simple'})
 //- +button({name: 'click me', background: 'simple', disabled: '-disabled'})
 //- +button({name: 'перейти к оплате', background: 'full', size: 'large'})
+

@@ -1,0 +1,15 @@
+include ../../components/buttons/buttons.pug  
+
+.buttons_UIkit
+  .buttons_UIkit_title Buttons
+  .buttons_UIkit_content
+    .buttons_UIkit_content_small
+      +button({name: 'click me', background: 'full'})
+      +button({name: 'click me', background: 'full', disabled: '-disabled'})
+      +button({name: 'click me', background: 'light'})
+      +button({name: 'click me', background: 'light', disabled: '-disabled'})
+    .buttons_UIkit_content_wrapper
+      +button({name: 'click me', background: 'simple'})
+      +button({name: 'click me', background: 'simple', disabled: '-disabled'})
+    +button({name: 'перейти к оплате', background: 'full', size: 'large'})
+

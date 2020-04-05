@@ -2,11 +2,11 @@
 
 .radio_buttons {
   display: flex;
-  flex-direction: row;
-  // width: 222px;
+  flex-direction: column;
 
   &__name {
     @include caption;
+    margin-bottom: 0.9rem;
   }
 
   &__input {

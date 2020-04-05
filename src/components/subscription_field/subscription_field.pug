@@ -4,9 +4,5 @@ mixin subscription_field(options)
       label(class="text_field__label")= options.label 
       span.text_field__state=options.state
     .text_field_subscription__content
-      input(class="text_field__input text_field__input-hover text_field__input-"+options.size type=options.type name=options.name value=options.value)
+      input(class="text_field__input text_field__input-hover text_field__input-"+options.size type=options.type name=options.name value=options.value placeholder=options.placeholder)
       button(class="arrow_forward" type='submit', name='submit' value="")
-
-
-
-//- +subscription_field({label: "subscription text field", size: "medium", type:"Email", name: "Email", value: "Email" })
